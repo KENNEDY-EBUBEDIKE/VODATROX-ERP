@@ -59,3 +59,9 @@ class SupplySerializer(ModelSerializer):
     class Meta:
         model = Supply
         fields = '__all__'
+
+
+class DebtSerializer(ModelSerializer):
+    class Meta:
+        model = Debt
+        fields = '__all__'

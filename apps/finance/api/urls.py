@@ -7,6 +7,7 @@ urlpatterns = [
     path('inventory/', inventory, name='api-inventory'),
     path('purchase/', purchase, name='api-purchase'),
     path('supply/', supply, name='api-supply'),
+    path('debt/', debt, name='api-debt'),
 ]
 
 if settings.DEBUG:

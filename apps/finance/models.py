@@ -66,3 +66,8 @@ class Purchase(models.Model):
 
     def __str__(self):
         return self.product
+
+
+class Debt(models.Model):
+    name = models.CharField(max_length=255, null=False, unique=True)
+    amount = models.IntegerField(null=False, blank=False, default=0)
