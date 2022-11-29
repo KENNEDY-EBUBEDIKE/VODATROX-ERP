@@ -3,7 +3,10 @@ from django.conf import settings
 from .views import *
 
 urlpatterns = [
+    path('deposits/', deposits, name='api-deposits'),
     path('inventory/', inventory, name='api-inventory'),
+    path('purchase/', purchase, name='api-purchase'),
+    path('supply/', supply, name='api-supply'),
 ]
 
 if settings.DEBUG:
