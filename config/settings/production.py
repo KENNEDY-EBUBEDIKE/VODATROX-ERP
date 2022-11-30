@@ -6,8 +6,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'vodatrox.com',
     'www.vodatrox.com',
-    config('PROD_SERVER_URL'),
-    'www.' + config('PROD_SERVER_URL'),
+    'server.erp.vodatrox.com'
+    'www.server.erp.vodatrox.com'
 ]
 
 # *****  MEDIA FILES SETTINGS *****
