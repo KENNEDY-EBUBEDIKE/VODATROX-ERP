@@ -6,7 +6,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'vodatrox.com',
     'www.vodatrox.com',
-    'server.erp.vodatrox.com'
+    'server.erp.vodatrox.com',
     'www.server.erp.vodatrox.com'
 ]
 
