@@ -40,6 +40,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     surname = models.CharField(null=True, blank=True, max_length=255)
 
     photo = models.ImageField(null=True, upload_to='image/', blank=True)
+    appointment = models.CharField(null=True, blank=True, max_length=255)
+    created_at = models.DateField(auto_now=True)
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'

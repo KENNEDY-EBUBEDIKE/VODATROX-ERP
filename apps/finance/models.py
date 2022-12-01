@@ -34,7 +34,7 @@ class Supply(models.Model):
     sales_person = models.CharField(max_length=255)
     product = models.ForeignKey('Product', on_delete=models.DO_NOTHING, related_name='supplies')
     quantity = models.IntegerField(null=True)
-    date_supplied = models.DateField(auto_now=True)
+    date_supplied = models.DateField(auto_now=False)
     created_at = models.DateTimeField(auto_now=True)
 
     def update_inventory(self, is_delete=False):
@@ -53,7 +53,7 @@ class Purchase(models.Model):
     product = models.ForeignKey('Product', null=True, on_delete=models.DO_NOTHING, related_name='purchases')
     quantity = models.IntegerField(null=False, blank=False, default=0)
     reference = models.CharField(max_length=100, blank=True, null=True)
-    purchase_date = models.DateField(auto_now=True)
+    purchase_date = models.DateField(auto_now=False)
     created_at = models.DateTimeField(auto_now=True)
 
     def update_inventory(self, delete=False):

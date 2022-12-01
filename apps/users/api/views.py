@@ -5,7 +5,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.request import Request
 from apps.users.models import User
 from apps.users.serializers import UserSerializer, MyAuthTokenSerializer
-import time
+from rest_framework import status
 
 
 @api_view(["GET"])
@@ -19,19 +19,23 @@ def users_list(request: Request) -> Response:
     })
 
 
-@api_view(["POST"])
+@api_view(["PATCH"])
 @permission_classes([IsAuthenticated])
 def register(request: Request) -> Response:
-    print(request.data)
-    return Response({
-        'success': True,
-        'users': UserSerializer(users, many=True).data
-    })
+    if request.method == "PATCH":
+        user_serializer = UserSerializer(instance=request.user, data=request.data, partial=True)
+        if user_serializer.is_valid():
+            user_serializer.save()
+            return Response(
+                data={
+                    "success": True,
+                    "user": user_serializer.data
+                },
+                status=status.HTTP_200_OK)
 
 
 @api_view(["POST"])
 def login(request: Request) -> Response:
-    time.sleep(3)
     serializer = MyAuthTokenSerializer(data=request.data, context={'request': request})
     if serializer.is_valid():
         user = serializer.validated_data['user']
