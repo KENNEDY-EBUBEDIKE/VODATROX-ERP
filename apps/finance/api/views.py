@@ -5,12 +5,12 @@ from rest_framework.request import Request
 from apps.finance.models import Deposit, StockInventory, Product, Purchase, Supply, Debt
 from rest_framework import status
 from apps.finance.serializers import *
-import time
 
 
 @api_view(["GET", "POST", "DELETE"])
 @permission_classes([IsAuthenticated])
 def purchase(request: Request) -> Response:
+
     if request.method == "POST":
         pc = Purchase()
         pc.product = Product.objects.get(id=request.data.get('product'))
@@ -19,7 +19,6 @@ def purchase(request: Request) -> Response:
         pc.reference = request.data.get('reference')
         pc.save()
         pc.update_inventory()
-
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
@@ -32,7 +31,7 @@ def purchase(request: Request) -> Response:
             'success': True,
         }, status=status.HTTP_200_OK)
 
-    purchases = Purchase.objects.all()
+    purchases = Purchase.objects.all().order_by('-quantity', 'purchase_date')
     return Response({
         'success': True,
         'purchases': PurchaseSerializer(purchases, many=True).data
@@ -69,16 +68,14 @@ def supply(request: Request) -> Response:
         sp = Supply.objects.get(id=request.GET['id'])
         sp.delete()
         sp.update_inventory(is_delete=True)
-
         debtor = Debt.objects.get(name=sp.sales_person)
         debtor.amount -= (sp.product.selling_price * sp.quantity)
         debtor.save()
-
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
 
-    supplies = Supply.objects.all()
+    supplies = Supply.objects.all().order_by('date_supplied', 'quantity')
     return Response({
         'success': True,
         'supplies': SupplySerializer(supplies, many=True).data
@@ -108,7 +105,7 @@ def inventory(request: Request) -> Response:
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
-    inventories = StockInventory.objects.all()
+    inventories = StockInventory.objects.all().order_by('-stock_balance')
     return Response({
         'success': True,
         'inventories': StockInventorySerializer(inventories, many=True).data
@@ -156,7 +153,7 @@ def deposits(request: Request) -> Response:
             'success': True,
         }, status=status.HTTP_200_OK)
 
-    all_deposits = Deposit.objects.all()
+    all_deposits = Deposit.objects.all().order_by('date_of_payment', 'is_confirmed', 'amount')
     return Response({
         'success': True,
         "deposits": DepositSerializer(all_deposits, many=True).data,
@@ -166,9 +163,19 @@ def deposits(request: Request) -> Response:
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def debt(request: Request) -> Response:
-    all_debts = Debt.objects.all()
-    print(all_debts)
+    all_debts = Debt.objects.all().order_by('amount')
     return Response({
         'success': True,
         "debts": DebtSerializer(all_debts, many=True).data,
+    })
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def confirm_deposit(request: Request) -> Response:
+    deposit = Deposit.objects.get(id=request.GET['id'])
+    deposit.is_confirmed = True
+    deposit.save()
+    return Response({
+        'success': True,
     })

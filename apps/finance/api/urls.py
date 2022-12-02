@@ -8,6 +8,7 @@ urlpatterns = [
     path('purchase/', purchase, name='api-purchase'),
     path('supply/', supply, name='api-supply'),
     path('debt/', debt, name='api-debt'),
+    path('confirm_deposit/', confirm_deposit, name='api-confirm_deposit'),
 ]
 
 if settings.DEBUG:

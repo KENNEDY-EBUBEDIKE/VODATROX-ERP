@@ -5,6 +5,9 @@ class StockInventory(models.Model):
     product = models.OneToOneField('Product', on_delete=models.CASCADE, related_name='inventory')
     stock_balance = models.IntegerField(null=True)
 
+    class Meta:
+        ordering = ('stock_balance', )
+
     def __str__(self):
         return self.product
 
