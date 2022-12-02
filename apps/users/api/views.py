@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from rest_framework.request import Request
 from apps.users.models import User
+from django.contrib.auth.models import Group
 from apps.users.serializers import UserSerializer, MyAuthTokenSerializer
 from rest_framework import status
 
@@ -40,6 +41,7 @@ def login(request: Request) -> Response:
     if serializer.is_valid():
         user = serializer.validated_data['user']
         token, created = Token.objects.get_or_create(user=user)
+        # print(UserSerializer(user).data['groups'])
         return Response({
             'success': True,
             'token': token.key,

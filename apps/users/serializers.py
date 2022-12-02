@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from .models import User
+from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
@@ -43,7 +44,15 @@ class MyAuthTokenSerializer(serializers.Serializer):
         return attrs
 
 
+class GroupSerializer(ModelSerializer):
+    class Meta:
+        model = Group
+        fields = '__all__'
+
+
 class UserSerializer(ModelSerializer):
+    groups = GroupSerializer(many=True)
+
     class Meta:
         model = User
         fields = '__all__'

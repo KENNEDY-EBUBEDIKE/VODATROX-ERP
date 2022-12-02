@@ -5,6 +5,7 @@ from rest_framework.request import Request
 from apps.finance.models import Deposit, StockInventory, Product, Purchase, Supply, Debt
 from rest_framework import status
 from apps.finance.serializers import *
+from apps.users.serializers import *
 
 
 @api_view(["GET", "POST", "DELETE"])
@@ -85,6 +86,7 @@ def supply(request: Request) -> Response:
 @api_view(["GET", "POST", "DELETE"])
 @permission_classes([IsAuthenticated])
 def inventory(request: Request) -> Response:
+
     if request.method == "POST":
         product_serializer = ProductSerializer(data=request.data)
         if product_serializer.is_valid():
@@ -100,8 +102,8 @@ def inventory(request: Request) -> Response:
                 status=status.HTTP_200_OK
             )
     if request.method == "DELETE":
-        deposit = Product.objects.get(id=request.GET['id'])
-        deposit.delete()
+        product = Product.objects.get(id=request.GET['id'])
+        product.delete()
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
@@ -119,18 +121,6 @@ def deposits(request: Request) -> Response:
         deposit_serializer = DepositSerializer(data=request.data)
         if deposit_serializer.is_valid():
             deposit_serializer.save()
-
-            try:
-                debtor = Debt.objects.get(name=deposit_serializer.data['depositor'])
-                debtor.amount -= deposit_serializer.data['amount']
-            except Exception as e:
-                print(e)
-                debtor = Debt()
-                debtor.name = deposit_serializer.data['depositor']
-                debtor.amount = -deposit_serializer.data['amount']
-
-            debtor.save()
-
             return Response({
                 'success': True,
             }, status=status.HTTP_200_OK)
@@ -143,15 +133,16 @@ def deposits(request: Request) -> Response:
 
     if request.method == "DELETE":
         deposit = Deposit.objects.get(id=request.GET['id'])
-        deposit.delete()
-
-        debtor = Debt.objects.get(name=deposit.depositor)
-        debtor.amount += deposit.amount
-        debtor.save()
-
-        return Response({
-            'success': True,
-        }, status=status.HTTP_200_OK)
+        if not deposit.is_confirmed:
+            deposit.delete()
+            return Response({
+                'success': True,
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({
+                'success': False,
+                'message': "You cannot Delete a Confirmed Deposit"
+            }, status=status.HTTP_200_OK)
 
     all_deposits = Deposit.objects.all().order_by('date_of_payment', 'is_confirmed', 'amount')
     return Response({
@@ -174,8 +165,29 @@ def debt(request: Request) -> Response:
 @permission_classes([IsAuthenticated])
 def confirm_deposit(request: Request) -> Response:
     deposit = Deposit.objects.get(id=request.GET['id'])
-    deposit.is_confirmed = True
-    deposit.save()
+    if not deposit.is_confirmed:
+        deposit.is_confirmed = True
+        try:
+            debtor = Debt.objects.get(name=deposit.depositor)
+            debtor.amount -= deposit.amount
+        except Exception as e:
+            print(e)
+            debtor = Debt()
+            debtor.name = deposit.depositor
+            debtor.amount = -deposit.amount
+        debtor.save()
+        deposit.save()
+        return Response({
+            'success': True,
+            'message': "Deposit Confirmed"
+        })
+    elif deposit.is_confirmed:
+        deposit.is_confirmed = False
+        debtor = Debt.objects.get(name=deposit.depositor)
+        debtor.amount += deposit.amount
+        debtor.save()
+        deposit.save()
     return Response({
         'success': True,
+        'message': "Deposit Unconfirmed"
     })
