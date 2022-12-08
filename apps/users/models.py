@@ -55,5 +55,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def update_profile_photo(self, photo):
         if self.photo:
-            os.remove(self.photo.path)
+            try:
+                os.remove(self.photo.path)
+            except FileNotFoundError:
+                pass
         self.photo = photo

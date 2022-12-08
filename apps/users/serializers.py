@@ -63,9 +63,7 @@ class UserSerializer(ModelSerializer):
         instance.appointment = validated_data.get('appointment', instance.appointment)
 
         if validated_data.get('photo',):
-            if instance.photo:
-                os.remove(instance.photo.path)
-            instance.photo = validated_data.get('photo', instance.photo)
+            instance.update_profile_photo(validated_data.get('photo'))
 
         instance.save()
         return instance
