@@ -11,7 +11,6 @@ from apps.users.serializers import *
 @api_view(["GET", "POST", "DELETE"])
 @permission_classes([IsAuthenticated])
 def purchase(request: Request) -> Response:
-
     if request.method == "POST":
         pc = Purchase()
         pc.product = Product.objects.get(id=request.data.get('product'))
@@ -83,10 +82,24 @@ def supply(request: Request) -> Response:
     })
 
 
-@api_view(["GET", "POST", "DELETE"])
+@api_view(["GET", "POST", "DELETE", "PATCH"])
 @permission_classes([IsAuthenticated])
 def inventory(request: Request) -> Response:
 
+    if request.method == "GET":
+        pk = request.GET.get('id')
+        if pk:
+            product = Product.objects.get(id=pk)
+            return Response({
+                'success': True,
+                'product': ProductSerializer(product).data
+            }, status=status.HTTP_200_OK)
+        else:
+            inventories = StockInventory.objects.all().order_by('-stock_balance')
+            return Response({
+                'success': True,
+                'inventories': StockInventorySerializer(inventories, many=True).data
+            })
     if request.method == "POST":
         product_serializer = ProductSerializer(data=request.data)
         if product_serializer.is_valid():
@@ -107,11 +120,18 @@ def inventory(request: Request) -> Response:
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
-    inventories = StockInventory.objects.all().order_by('-stock_balance')
-    return Response({
-        'success': True,
-        'inventories': StockInventorySerializer(inventories, many=True).data
-    })
+
+    if request.method == "PATCH":
+        print(request.data)
+        product = Product.objects.get(id=request.data.get("pk"))
+        product_serializer = ProductSerializer(instance=product, data=request.data, partial=True)
+        if product_serializer.is_valid():
+            product_serializer.save()
+        else:
+            print(product_serializer.errors)
+        return Response({
+            'success': True,
+        }, status=status.HTTP_200_OK)
 
 
 @api_view(["GET", "POST", "DELETE"])
