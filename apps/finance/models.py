@@ -1,6 +1,14 @@
 from django.db import models
 
 
+class SalesPerson(models.Model):
+    name = models.CharField(max_length=255, null=False, unique=False)
+    code = models.CharField(max_length=10, null=False, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class StockInventory(models.Model):
     product = models.OneToOneField('Product', on_delete=models.CASCADE, related_name='inventory')
     stock_balance = models.IntegerField(null=True)
