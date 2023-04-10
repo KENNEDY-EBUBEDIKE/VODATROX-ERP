@@ -1,12 +1,57 @@
 from django.db import models
+from datetime import datetime
+from pytz import timezone
 
 
 class SalesPerson(models.Model):
-    name = models.CharField(max_length=255, null=False, unique=False)
-    code = models.CharField(max_length=10, null=False, unique=True)
+    user = models.OneToOneField('users.User', on_delete=models.CASCADE, related_name='sales_person')
+    account_balance = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return self.user.username
+
+
+class Transaction(models.Model):
+    TRANSACTION_TYPES = (
+        ("DEPOSIT", "Deposit"),
+        ("SUPPLY", "Supply")
+    )
+    sales_person = models.ForeignKey('SalesPerson', on_delete=models.DO_NOTHING, null=True)
+    amount = models.DecimalField(null=False, max_digits=10, decimal_places=2)
+    balance_before = models.BigIntegerField(default=0)
+    balance_after = models.BigIntegerField(default=0)
+    transaction_type = models.CharField(max_length=50, choices=TRANSACTION_TYPES, null=True)
+    transaction_date = models.DateTimeField(null=False)
+    transaction_reference = models.CharField(null=True, blank=True, max_length=255)
+    transaction_details = models.CharField(null=True, blank=True, max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class SupplyTransaction(Transaction):
+    is_paid = models.BooleanField(default=False)
+    product = models.ForeignKey('Product', on_delete=models.DO_NOTHING, related_name='supplies')
+    quantity = models.IntegerField(null=True)
+
+    def update_inventory(self, is_delete=False):
+        if is_delete:
+            self.product.inventory.stock_balance += self.quantity
+            self.product.inventory.save()
+        else:
+            self.product.inventory.stock_balance -= self.quantity
+            self.product.inventory.save()
+
+    def __str__(self):
+        return self.sales_person
+
+
+class DepositTransaction(Transaction):
+    is_confirmed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.sales_person
 
 
 class StockInventory(models.Model):
@@ -30,36 +75,6 @@ class Product(models.Model):
         return self.name
 
 
-class Deposit (models.Model):
-    depositor = models.CharField(max_length=255, null=True, blank=True)
-    amount = models.IntegerField(null=False)
-    is_confirmed = models.BooleanField(default=False)
-    date_of_payment = models.DateField(auto_now=False)
-    created_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return f'{self.depositor} => {self.amount}'
-
-
-class Supply(models.Model):
-    sales_person = models.CharField(max_length=255)
-    product = models.ForeignKey('Product', on_delete=models.DO_NOTHING, related_name='supplies')
-    quantity = models.IntegerField(null=True)
-    date_supplied = models.DateField(auto_now=False)
-    created_at = models.DateTimeField(auto_now=True)
-
-    def update_inventory(self, is_delete=False):
-        if is_delete:
-            self.product.inventory.stock_balance += self.quantity
-            self.product.inventory.save()
-        else:
-            self.product.inventory.stock_balance -= self.quantity
-            self.product.inventory.save()
-
-    def __str__(self):
-        return self.sales_person
-
-
 class Purchase(models.Model):
     product = models.ForeignKey('Product', null=True, on_delete=models.DO_NOTHING, related_name='purchases')
     quantity = models.IntegerField(null=False, blank=False, default=0)
@@ -80,5 +95,5 @@ class Purchase(models.Model):
 
 
 class Debt(models.Model):
-    name = models.CharField(max_length=255, null=False, unique=True)
+    debtor = models.OneToOneField('users.User', on_delete=models.DO_NOTHING, related_name="debt")
     amount = models.IntegerField(null=False, blank=False, default=0)
