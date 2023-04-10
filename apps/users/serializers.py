@@ -1,8 +1,10 @@
 from rest_framework.serializers import ModelSerializer
 from .models import User
+from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
+import os
 
 
 class MyAuthTokenSerializer(serializers.Serializer):
@@ -42,7 +44,26 @@ class MyAuthTokenSerializer(serializers.Serializer):
         return attrs
 
 
+class GroupSerializer(ModelSerializer):
+    class Meta:
+        model = Group
+        fields = '__all__'
+
+
 class UserSerializer(ModelSerializer):
+    groups = GroupSerializer(many=True)
+
     class Meta:
         model = User
         fields = '__all__'
+
+    def update(self, instance, validated_data):
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.surname = validated_data.get('surname', instance.surname)
+        instance.appointment = validated_data.get('appointment', instance.appointment)
+
+        if validated_data.get('photo',):
+            instance.update_profile_photo(validated_data.get('photo'))
+
+        instance.save()
+        return instance

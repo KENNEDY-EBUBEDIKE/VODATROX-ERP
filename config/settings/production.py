@@ -1,25 +1,24 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'vodatrox.com',
     'www.vodatrox.com',
-    'cyber-security.vodatrox.com',
-    'www.cyber-security.vodatrox.com',
+    'server.erp.vodatrox.com',
+    'www.server.erp.vodatrox.com'
 ]
 
 # *****  MEDIA FILES SETTINGS *****
-MEDIA_ROOT = '/home/vodatro1/cyber-security.vodatrox.com/media/'
+MEDIA_ROOT = config('PROD_MEDIA_ROOT')
 
 CORS_ALLOWED_ORIGINS = [
-    'https://vodatrox.com',
+    config('PROD_CLIENT_URL'),
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://vodatrox.com',
+    config('PROD_CLIENT_URL'),
 ]
 
 # HTTP verbs that are allowed

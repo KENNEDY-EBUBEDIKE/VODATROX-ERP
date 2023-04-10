@@ -4,10 +4,13 @@ from .views import *
 
 urlpatterns = [
     path('deposits/', deposits, name='api-deposits'),
+    path('sales-persons/', sales_persons, name='api-sales_persons'),
+    path('sales-person-transactions/', transactions, name='api-transactions'),
     path('inventory/', inventory, name='api-inventory'),
     path('purchase/', purchase, name='api-purchase'),
     path('supply/', supply, name='api-supply'),
     path('debt/', debt, name='api-debt'),
+    path('confirm_deposit/', confirm_deposit, name='api-confirm_deposit'),
 ]
 
 if settings.DEBUG:

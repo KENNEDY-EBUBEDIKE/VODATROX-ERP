@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = [
 CUSTOM_APPS = [
     'apps.users',
     'apps.finance',
+    'apps.account',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -125,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = config('PROD_STATIC_ROOT')
 STATICFILES_DIR = [BASE_DIR / '../static']
 
 
