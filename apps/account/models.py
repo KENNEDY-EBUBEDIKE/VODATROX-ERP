@@ -24,15 +24,16 @@ class Transaction(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        abstract = True
+    def __str__(self):
+        return self.initiator
 
 
-class CreditTransaction(Transaction):
+class CreditTransaction(models.Model):
     CREDIT_CHOICES = (
         ("SALES", "SALES"),
     )
 
+    transaction = models.OneToOneField('Transaction', on_delete=models.CASCADE, related_name='credit', null=True)
     credit_source = models.CharField(null=False, max_length=255, choices=CREDIT_CHOICES)
     account = models.ForeignKey('Account', on_delete=models.DO_NOTHING, related_name='credit_transactions')
 
@@ -40,7 +41,7 @@ class CreditTransaction(Transaction):
         return self.initiator
 
 
-class DebitTransaction(Transaction):
+class DebitTransaction(models.Model):
     DEBIT_CHOICES = (
         ("BANK CHARGES", "BANK CHARGES"),
         ("PURCHASE ORDER", "PURCHASE ORDER"),
@@ -50,6 +51,7 @@ class DebitTransaction(Transaction):
         ("MISCELLANEOUS", "MISCELLANEOUS"),
     )
 
+    transaction = models.OneToOneField('Transaction', on_delete=models.CASCADE, related_name='debit', null=True)
     debit_source = models.CharField(null=False, max_length=255, choices=DEBIT_CHOICES)
     account = models.ForeignKey('Account', on_delete=models.DO_NOTHING, related_name='debit_transactions')
 

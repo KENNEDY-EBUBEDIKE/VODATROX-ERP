@@ -42,12 +42,12 @@ class BaseTransaction(metaclass=abc.ABCMeta):
         """Set reference and make the method chainable"""
 
         if isinstance(self, utilities.finance_transaction.DepositTransaction):
-            if DepositTransaction.objects.filter(transaction_reference=reference).exists():
+            if DepositTransaction.objects.filter(transaction__transaction_reference=reference).exists():
                 raise errors.DuplicateTransactionReference("A Transaction Already has this Reference")
             else:
                 self.reference = reference
         elif isinstance(self, utilities.account_transaction.CreditTransaction):
-            if CreditTransaction.objects.filter(transaction_reference=reference).exists():
+            if CreditTransaction.objects.filter(transaction__transaction_reference=reference).exists():
                 raise errors.DuplicateTransactionReference("A Transaction Already has this Reference")
             else:
                 self.reference = reference

@@ -18,7 +18,7 @@ import json
 def sales_persons(request: Request) -> Response:
     if request.method == "GET":
 
-        if request.GET['id']:
+        if request.GET.get('id', None):
             try:
                 sales_person = SalesPerson.objects.get(user__id=request.GET['id'])
                 return Response({
@@ -171,11 +171,15 @@ def inventory(request: Request) -> Response:
 def deposits(request: Request) -> Response:
 
     if request.method == "POST":
-        deposit_serializer = DepositTransactionSerializer(data=request.data)
-        if deposit_serializer.is_valid():
-            deposit_serializer.save(
+        transaction_serializer = TransactionSerializer(data=request.data)
+        if transaction_serializer.is_valid():
+            transaction_serializer.save(
                 transaction_type="DEPOSIT",
                 sales_person=SalesPerson.objects.get(id=int(request.data['sales_person']))
+            )
+
+            DepositTransaction.objects.create(
+                transaction=Transaction.objects.get(id=int(transaction_serializer.data['id']))
             )
 
             return Response({
@@ -193,7 +197,7 @@ def deposits(request: Request) -> Response:
     elif request.method == "DELETE":
         deposit = DepositTransaction.objects.get(id=request.GET['id'])
         if not deposit.is_confirmed:
-            deposit.delete()
+            deposit.transaction.delete()
             return Response({
                 'success': True,
             }, status=status.HTTP_200_OK)
@@ -204,7 +208,9 @@ def deposits(request: Request) -> Response:
             }, status=status.HTTP_200_OK)
 
     elif request.method == "GET":
-        all_deposits = DepositTransaction.objects.all().order_by('transaction_date', 'is_confirmed', 'amount')
+        all_deposits = DepositTransaction.objects.all().order_by(
+            'transaction__transaction_date', 'is_confirmed',
+            'transaction__amount')
         return Response({
             'success': True,
             "deposits": DepositTransactionSerializer(all_deposits, many=True).data,
@@ -221,56 +227,63 @@ def debt(request: Request) -> Response:
     })
 
 
-@api_view(["POST"])
+@api_view(["POST", "GET"])
 @permission_classes([IsAuthenticated])
 def confirm_deposit(request: Request) -> Response:
-    deposit = DepositTransaction.objects.get(id=request.data['id'])
-    account = Account.objects.get(id=request.data['account'])
-    credit_source = request.data['source']
-    if not deposit.is_confirmed:
-        try:
-            # @TODO: process the Deposit to affect the sales person's account
+    if request.method == "POST":
+        deposit = DepositTransaction.objects.get(id=request.data['id'])
+        account = Account.objects.get(id=request.data['account'])
+        credit_source = request.data['source']
+        if not deposit.is_confirmed:
+            try:
+                # @TODO: process the Deposit to affect the sales person's account
 
-            finance_transaction_module = finance_transaction_factory("deposit")
-            deposit_completed, deposit_transaction = (
-                finance_transaction_module
-                .set_transaction_reference(request.data['reference'])
-                .set_balances(deposit)
-            )
-            if deposit_completed:
-
-                # @TODO: process the Deposit to affect the Cashbook account
-                account_transaction_module = account_transaction_factory("credit")
-                credit_completed, credit_transaction = (
-                    account_transaction_module
+                finance_transaction_module = finance_transaction_factory("deposit")
+                deposit_completed, deposit_transaction = (
+                    finance_transaction_module
                     .set_transaction_reference(request.data['reference'])
-                    .set_balances(deposit_transaction, account)
+                    .set_balances(deposit)
                 )
+                if deposit_completed:
 
-                if credit_completed:
-                    finance_transaction_module.initiate(deposit=deposit)
-                    account_transaction_module.initiate(deposit_transaction=deposit_transaction, account=account, source=credit_source)
-                    return Response({
-                        'success': True,
-                        'message': "Deposit Confirmed"
-                    })
-        except Exception as e:
-            print(e)
+                    # @TODO: process the Deposit to affect the Cashbook account
+                    account_transaction_module = account_transaction_factory("credit")
+                    credit_completed, credit_transaction = (
+                        account_transaction_module
+                        .set_transaction_reference(request.data['reference'])
+                        .set_balances(deposit_transaction, account)
+                    )
+
+                    if credit_completed:
+                        if finance_transaction_module.initiate(deposit=deposit):
+                            account_transaction_module.initiate(
+                                deposit_transaction=deposit_transaction,
+                                account=account,
+                                source=credit_source
+                            )
+                        return Response({
+                            'success': True,
+                            'message': "Deposit Confirmed"
+                        })
+            except Exception as e:
+                print(e)
+                return Response({
+                    'success': False,
+                    'message': e.args[0]
+                })
+    elif request.method == "GET":
+        deposit = DepositTransaction.objects.get(id=request.GET['id'])
+        if deposit.is_confirmed:
+            # deposit.is_confirmed = False
+            # debtor = Debt.objects.get(debtor=deposit.sales_person)
+            # debtor.amount += deposit.amount
+            # debtor.save()
+            # deposit.save()
+
             return Response({
-                'success': False,
-                'message': e.args[0]
+                'success': True,
+                'message': "Testing"
             })
-    # elif deposit.is_confirmed:
-    #     deposit.is_confirmed = False
-    #     debtor = Debt.objects.get(debtor=deposit.sales_person)
-    #     debtor.amount += deposit.amount
-    #     debtor.save()
-    #     deposit.save()
-    #
-    #     return Response({
-    #         'success': True,
-    #         'message': "Deposit Unconfirmed"
-    #     })
 
 
 @api_view(["GET"])
@@ -288,10 +301,9 @@ def transactions(request: Request) -> Response:
     # )
     # all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('transaction_date')
 
-    results = Transaction.objects.filter(sales_person=sales_person).select_subclasses()
-    print(results)
+    all_sales_persons_transactions = Transaction.objects.filter(sales_person=sales_person, deposit__is_confirmed=True)
 
     return Response({
         'success': True,
-        # 'transactions': all_sales_persons_transactions
+        'transactions': TransactionSerializer(all_sales_persons_transactions, many=True).data
     })

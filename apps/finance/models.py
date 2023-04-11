@@ -10,6 +10,13 @@ class SalesPerson(models.Model):
     def __str__(self):
         return self.user.username
 
+    def get_debt(self):
+        try:
+            return self.user.debt.amount
+        except Exception as e:
+            print(e)
+            return 0
+
 
 class Transaction(models.Model):
     TRANSACTION_TYPES = (
@@ -26,11 +33,12 @@ class Transaction(models.Model):
     transaction_details = models.CharField(null=True, blank=True, max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        abstract = True
+    def __str__(self):
+        return str(self.sales_person)
 
 
-class SupplyTransaction(Transaction):
+class SupplyTransaction(models.Model):
+    transaction = models.OneToOneField('Transaction', on_delete=models.CASCADE, related_name='supply')
     is_paid = models.BooleanField(default=False)
     product = models.ForeignKey('Product', on_delete=models.DO_NOTHING, related_name='supplies')
     quantity = models.IntegerField(null=True)
@@ -47,7 +55,8 @@ class SupplyTransaction(Transaction):
         return self.sales_person
 
 
-class DepositTransaction(Transaction):
+class DepositTransaction(models.Model):
+    transaction = models.OneToOneField('Transaction', on_delete=models.CASCADE, related_name='deposit')
     is_confirmed = models.BooleanField(default=False)
 
     def __str__(self):
