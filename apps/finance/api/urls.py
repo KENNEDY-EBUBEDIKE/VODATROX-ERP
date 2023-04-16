@@ -8,6 +8,7 @@ urlpatterns = [
     path('sales-person-transactions/', transactions, name='api-transactions'),
     path('inventory/', inventory, name='api-inventory'),
     path('purchase/', purchase, name='api-purchase'),
+    path('confirm-delivery/', confirm_purchase_delivery, name='api-confirm_purchase_delivery'),
     path('supply/', supply, name='api-supply'),
     path('debt/', debt, name='api-debt'),
     path('confirm_deposit/', confirm_deposit, name='api-confirm_deposit'),

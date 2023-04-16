@@ -24,8 +24,15 @@ class TransactionSerializer(ModelSerializer):
         fields = '__all__'
 
 
+class ProductSerializer(ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+
 class SupplyTransactionSerializer(ModelSerializer):
     transaction = TransactionSerializer(required=False)
+    product = ProductSerializer(required=False)
 
     class Meta:
         model = SupplyTransaction
@@ -48,22 +55,16 @@ class DebtSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class ProductSerializer(ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
-
-
-class StockInventorySerializer(ModelSerializer):
+class InventoryLogSerializer(ModelSerializer):
     product = ProductSerializer()
 
     class Meta:
-        model = StockInventory
+        model = InventoryLog
         fields = '__all__'
 
 
 class PurchaseSerializer(ModelSerializer):
-    product = ProductSerializer()
+    product = ProductSerializer(required=False)
 
     class Meta:
         model = Purchase

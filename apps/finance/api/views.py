@@ -7,6 +7,7 @@ from rest_framework import status
 from apps.finance.serializers import *
 from apps.users.serializers import *
 from utilities import account_transaction_factory, finance_transaction_factory
+import datetime
 from apps.account.models import Account
 from django.db.models import F, Value, CharField
 from itertools import chain
@@ -44,24 +45,55 @@ def sales_persons(request: Request) -> Response:
 @permission_classes([IsAuthenticated])
 def purchase(request: Request) -> Response:
     if request.method == "POST":
-        pc = Purchase()
-        pc.product = Product.objects.get(id=request.data.get('product'))
-        pc.quantity = int(request.data.get('quantity'))
-        pc.purchase_date = request.data.get('purchase_date')
-        pc.reference = request.data.get('reference')
-        pc.save()
-        pc.update_inventory()
+        purchase_serializer = PurchaseSerializer(data=request.data)
+        if purchase_serializer.is_valid():
+            product = Product.objects.get(id=request.data.get('product'))
+            account = Account.objects.get(id=request.data.get('account'))
+            quantity = int(request.data.get('quantity'))
+            amount = product.cost_price * quantity
+
+            # Debit the biz account
+            debit = account.transact(
+                initiator=f"{request.user.first_name} {request.user.surname}",
+                trx_type="DEBIT",
+                amount=amount,
+                details=f"Purchase of {quantity} cartons of {product.name}",
+                ref=f"PUR/{request.data.get('order_reference')}",
+                trx_date=request.data.get('purchase_date'),
+                source="PURCHASE ORDER",
+            )
+            if debit:
+                purchase_serializer.save(product=product, debit=debit, amount=amount)
+
+        else:
+            return Response(
+                data={"success": False,
+                      "message": purchase_serializer.errors
+                      },
+                status=status.HTTP_200_OK
+            )
         return Response({
             'success': True,
+            'message': "Order Placed Successfully",
+
         }, status=status.HTTP_200_OK)
 
     if request.method == "DELETE":
         p = Purchase.objects.get(id=request.GET['id'])
-        p.delete()
-        p.update_inventory(delete=True)
-        return Response({
-            'success': True,
-        }, status=status.HTTP_200_OK)
+        if not p.is_delivered:
+            p.debit.account.transact(
+                initiator=f"{request.user.first_name} {request.user.surname}",
+                trx_type="CREDIT",
+                amount=p.amount,
+                details=f"Reversal of purchase error",
+                ref=f"REVERSAL/{p.order_reference}",
+                trx_date=datetime.datetime.now(),
+                source="REVERSAL",
+            )
+            p.delete()
+            return Response({
+                'success': True,
+            }, status=status.HTTP_200_OK)
 
     purchases = Purchase.objects.all().order_by('-quantity', 'purchase_date')
     return Response({
@@ -70,47 +102,104 @@ def purchase(request: Request) -> Response:
     })
 
 
+@api_view(["PATCH"])
+@permission_classes([IsAuthenticated])
+def confirm_purchase_delivery(request: Request) -> Response:
+    if request.method == "PATCH":
+        p = Purchase.objects.get(id=request.data['id'])
+        p.invoice_reference = request.data.get('invoice_reference')
+        p.product.change_stock_balance(
+            p.quantity,
+            direction="INC",
+            details=f"PURCHASE OF {p.quantity} CARTONS OF {p.product.name}",
+        )
+        p.is_delivered = True
+        p.save()
+        return Response({
+            'success': True,
+        }, status=status.HTTP_200_OK)
+
+
 @api_view(["GET", "POST", "DELETE"])
 @permission_classes([IsAuthenticated])
 def supply(request: Request) -> Response:
     if request.method == "POST":
-        sp = Supply()
-        sp.sales_person = request.data.get('sales_person')
-        sp.product = Product.objects.get(id=request.data.get('product'))
-        sp.quantity = int(request.data.get('quantity'))
-        sp.date_supplied = request.data.get('date_supplied')
-
-        sp.save()
-        sp.update_inventory()
+        sales_person = SalesPerson.objects.get(id=int(request.data.get('sales_person')))
+        product = Product.objects.get(id=int(request.data.get('product')))
+        quantity = int(request.data.get('quantity'))
+        date_supplied = request.data.get('date_supplied')
+        reference = f"SP/{int(datetime.datetime.now().timestamp())}"
+        if request.data.get('rate', None):
+            rate = int(request.data['rate'])
+        else:
+            rate = product.selling_price
+        amount = int(quantity * rate)
+        bb = sales_person.account_balance
+        ba = bb - amount
 
         try:
-            debtor = Debt.objects.get(name=sp.sales_person)
-            debtor.amount += (sp.product.selling_price * sp.quantity)
+            assert abs(ba) == abs((sales_person.get_debt() + amount)), "Balance Inconsistency"
+
+            transaction = Transaction.objects.create(
+                sales_person=sales_person,
+                amount=amount,
+                balance_before=bb,
+                balance_after=ba,
+                transaction_type="SUPPLY",
+                transaction_date=date_supplied,
+                transaction_reference=reference,
+                transaction_details=f"{quantity} CARTONS OF {product.name}"
+            )
+
+            log = product.change_stock_balance(
+                quantity,
+                direction="DEC",
+                details=f"{quantity} CARTONS OF {product.name}",
+            )
+
+            SupplyTransaction.objects.create(
+                transaction=transaction,
+                quantity=quantity,
+                product=product,
+                inventory_log=log,
+            )
+
+            sales_person.account_balance = ba
+            sales_person.set_debt(sales_person.get_debt() + amount)
+            sales_person.save()
+
+            return Response({
+                'success': True,
+                'message': "Supplied Successfully",
+            }, status=status.HTTP_200_OK)
         except Exception as e:
-            print(e)
-            debtor = Debt()
-            debtor.name = sp.sales_person
-            debtor.amount = (sp.product.selling_price * sp.quantity)
-        debtor.save()
-        return Response({
-            'success': True,
-        }, status=status.HTTP_200_OK)
+            return Response({
+                'success': False,
+                'message': e.args[0],
+            }, status=status.HTTP_200_OK)
 
     if request.method == "DELETE":
-        sp = Supply.objects.get(id=request.GET['id'])
-        sp.delete()
-        sp.update_inventory(is_delete=True)
-        debtor = Debt.objects.get(name=sp.sales_person)
-        debtor.amount -= (sp.product.selling_price * sp.quantity)
-        debtor.save()
+        sp = SupplyTransaction.objects.get(id=request.GET['id'])
+
+        sp.product.change_stock_balance(
+            sp.quantity,
+            direction="INC",
+            details=f"REVERSAL FOR {sp.quantity} CTNS OF {sp.product.name}",
+        )
+
+        sp.transaction.sales_person.set_debt(sp.transaction.sales_person.get_debt() - sp.transaction.amount)
+        sp.transaction.sales_person.account_balance = sp.transaction.sales_person.account_balance + sp.transaction.amount
+        sp.transaction.sales_person.save()
+        sp.transaction.delete()
+
         return Response({
             'success': True,
         }, status=status.HTTP_200_OK)
 
-    supplies = Supply.objects.all().order_by('date_supplied', 'quantity')
+    supplies = SupplyTransaction.objects.all().order_by('transaction__transaction_date', 'quantity')
     return Response({
         'success': True,
-        'supplies': SupplySerializer(supplies, many=True).data
+        'supplies': SupplyTransactionSerializer(supplies, many=True).data
     })
 
 
@@ -127,11 +216,12 @@ def inventory(request: Request) -> Response:
                 'product': ProductSerializer(product).data
             }, status=status.HTTP_200_OK)
         else:
-            inventories = StockInventory.objects.all().order_by('-stock_balance')
+            products = Product.objects.all().order_by('-stock_balance')
             return Response({
                 'success': True,
-                'inventories': StockInventorySerializer(inventories, many=True).data
+                'products': ProductSerializer(products, many=True).data
             })
+
     if request.method == "POST":
         product_serializer = ProductSerializer(data=request.data)
         if product_serializer.is_valid():
@@ -154,7 +244,6 @@ def inventory(request: Request) -> Response:
         }, status=status.HTTP_200_OK)
 
     if request.method == "PATCH":
-        print(request.data)
         product = Product.objects.get(id=request.data.get("pk"))
         product_serializer = ProductSerializer(instance=product, data=request.data, partial=True)
         if product_serializer.is_valid():
@@ -220,11 +309,13 @@ def deposits(request: Request) -> Response:
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def debt(request: Request) -> Response:
-    all_debts = Debt.objects.all().order_by('amount')
-    return Response({
-        'success': True,
-        "debts": DebtSerializer(all_debts, many=True).data,
-    })
+    if request.method == "GET":
+        all_debts = Debt.objects.all().order_by('amount')
+        return Response({
+            'success': True,
+            "debts": DebtSerializer(all_debts, many=True).data,
+            "total_debt": sum(all_debts.values_list('amount', flat=True)),
+        })
 
 
 @api_view(["POST", "GET"])
@@ -261,6 +352,7 @@ def confirm_deposit(request: Request) -> Response:
                                 account=account,
                                 source=credit_source
                             )
+
                         return Response({
                             'success': True,
                             'message': "Deposit Confirmed"
@@ -274,15 +366,29 @@ def confirm_deposit(request: Request) -> Response:
     elif request.method == "GET":
         deposit = DepositTransaction.objects.get(id=request.GET['id'])
         if deposit.is_confirmed:
-            # deposit.is_confirmed = False
-            # debtor = Debt.objects.get(debtor=deposit.sales_person)
-            # debtor.amount += deposit.amount
-            # debtor.save()
-            # deposit.save()
+            deposit.is_confirmed = False
+
+            deposit.transaction.transaction_reference = None
+            deposit.transaction.balance_before = 0
+            deposit.transaction.balance_after = 0
+
+            debt = Debt.objects.get(debtor=deposit.transaction.sales_person.user)
+            debt.amount += deposit.transaction.amount
+
+            deposit.transaction.sales_person.account_balance -= deposit.transaction.amount
+
+            deposit.credit.account.account_balance -= deposit.transaction.amount
+
+            deposit.transaction.sales_person.save()
+            deposit.transaction.save()
+            deposit.save()
+            debt.save()
+            deposit.credit.account.save()
+            deposit.credit.transaction.delete()
 
             return Response({
                 'success': True,
-                'message': "Testing"
+                'message': "Deposit Unconfirmed"
             })
 
 
@@ -292,16 +398,23 @@ def transactions(request: Request) -> Response:
     sales_person = SalesPerson.objects.get(id=request.GET['sales_person_id'])
 
     # The annotate method adds extra field to the filtered Qs
-    # Then union joins the Qs
+
     # deposit_transactions = DepositTransaction.objects.filter(sales_person=sales_person).annotate(
     #     transaction_kind=Value('Deposit', output_field=CharField())
     # )
-    # supply_transactions = SupplyTransaction.objects.filter(sales_person=sales_person).annotate(
-    #     transaction_kind=Value('Supply', output_field=CharField())
-    # )
-    # all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('transaction_date')
 
-    all_sales_persons_transactions = Transaction.objects.filter(sales_person=sales_person, deposit__is_confirmed=True)
+    deposit_transactions = Transaction.objects.filter(
+        sales_person=sales_person,
+        deposit__is_confirmed=True,
+        transaction_type="DEPOSIT"
+    )
+    supply_transactions = Transaction.objects.filter(
+        sales_person=sales_person,
+        transaction_type="SUPPLY"
+    )
+
+    # Then union joins the Qs
+    all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('transaction_date')
 
     return Response({
         'success': True,

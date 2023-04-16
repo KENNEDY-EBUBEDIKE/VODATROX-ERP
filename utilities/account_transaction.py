@@ -42,19 +42,25 @@ class CreditTransaction(BaseTransaction):
             balance_before=self.balance_before,
             balance_after=self.balance_after,
             transaction_reference=self.reference,
+            transaction_type="CREDIT",
+            transaction_details=kwargs['deposit_transaction'].deposit.transaction.transaction_details,
+            source=self.source,
             transaction_date=kwargs['deposit_transaction'].deposit.transaction.transaction_date,
         )
 
-        CreditTrans.objects.create(
+        crd = CreditTrans.objects.create(
             transaction=transaction,
-            credit_source=self.source,
             account=kwargs['account']
         )
 
+        kwargs['deposit_transaction'].deposit.credit = crd
+        kwargs['deposit_transaction'].deposit.save()
+
         kwargs['account'].account_balance = self.new_balance
         kwargs['account'].save()
-        return True
+        return True, crd
 
 
 class DebitTransaction(BaseTransaction):
     """ Supply Transaction processor """
+    pass

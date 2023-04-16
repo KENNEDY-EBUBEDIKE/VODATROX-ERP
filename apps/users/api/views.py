@@ -7,6 +7,7 @@ from apps.users.models import User
 from apps.finance.models import SalesPerson
 from django.contrib.auth.models import Group
 from apps.users.serializers import UserSerializer, MyAuthTokenSerializer
+from apps.finance.models import Debt
 from rest_framework import status
 
 
@@ -82,7 +83,7 @@ def user(request: Request) -> Response:
             new_user = User.objects.create_user(
                 email=request.data['email'],
                 username=request.data['surname'] + "-" + request.data['first_name'],
-                password=request.data['surname'] + "@001",
+                password=request.data['surname'].lower() + "@001",
                 first_name=request.data['first_name'],
                 surname=request.data['surname'],
                 phone_number=request.data['phone_number'],
@@ -100,6 +101,8 @@ def user(request: Request) -> Response:
                 new_user.is_staff = True
                 new_user.is_superuser = True
             new_user.save()
+
+            Debt.objects.create(debtor=new_user)
         except Exception as e:
             print(e)
             return Response({

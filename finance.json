@@ -62,7 +62,8 @@
       "name": "MUNCHIT SWEET SURPRISE",
       "alias_name": "SWEET SURPRISE",
       "cost_price": 5100,
-      "selling_price": 5400
+      "selling_price": 5400,
+      "stock_balance": 100
     }
   },
   {
@@ -72,7 +73,8 @@
       "name": "MUNCHIT CREAMY CRUNCH",
       "alias_name": "CREAMY CRUNCH",
       "cost_price": 5100,
-      "selling_price": 5400
+      "selling_price": 5400,
+      "stock_balance": 89
     }
   },
   {
@@ -82,7 +84,8 @@
       "name": "MUNCHIT CHEESY STIX",
       "alias_name": "CHEESY STIX",
       "cost_price": 5100,
-      "selling_price": 5400
+      "selling_price": 5400,
+      "stock_balance": 90
     }
   },
   {
@@ -92,7 +95,8 @@
       "name": "MUNCHIT PUFF CHEESE BALLS",
       "alias_name": "CHEESE BALLS",
       "cost_price": 4600,
-      "selling_price": 5000
+      "selling_price": 5000,
+      "stock_balance": 80
     }
   },
   {
@@ -102,7 +106,8 @@
       "name": "GO-GRAINS 900G",
       "alias_name": "GG 900G",
       "cost_price": 8400,
-      "selling_price": 8700
+      "selling_price": 8700,
+      "stock_balance": 76
     }
   },
   {
@@ -112,7 +117,8 @@
       "name": "GO-GRAINS 450G",
       "alias_name": "GG 450G",
       "cost_price": 9200,
-      "selling_price": 9500
+      "selling_price": 9500,
+      "stock_balance": 70
     }
   },
   {
@@ -122,7 +128,8 @@
       "name": "GO-GRAINS 45G",
       "alias_name": "GG 45G",
       "cost_price": 7600,
-      "selling_price": 8000
+      "selling_price": 8000,
+      "stock_balance": 10
     }
   },
   {
@@ -5140,335 +5147,6 @@
       "date_supplied": "2023-03-31",
       "created_at": "2023-03-31T10:04:46.115Z"
     }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 1,
-    "fields": {
-      "product": 6,
-      "quantity": 2,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:37:13.951Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 2,
-    "fields": {
-      "product": 5,
-      "quantity": 100,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:52:34.982Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 3,
-    "fields": {
-      "product": 7,
-      "quantity": 121,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:53:20.580Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 4,
-    "fields": {
-      "product": 1,
-      "quantity": 100,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:53:52.239Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 5,
-    "fields": {
-      "product": 2,
-      "quantity": 80,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:54:56.662Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 6,
-    "fields": {
-      "product": 3,
-      "quantity": 60,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:55:21.211Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 7,
-    "fields": {
-      "product": 4,
-      "quantity": 125,
-      "reference": "0",
-      "purchase_date": "2022-11-30",
-      "created_at": "2022-11-30T11:55:42.448Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 8,
-    "fields": {
-      "product": 4,
-      "quantity": 200,
-      "reference": "1611942",
-      "purchase_date": "2022-12-09",
-      "created_at": "2022-12-13T18:47:52.756Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 9,
-    "fields": {
-      "product": 2,
-      "quantity": 55,
-      "reference": "6043089",
-      "purchase_date": "2023-01-06",
-      "created_at": "2023-01-18T05:23:53.389Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 10,
-    "fields": {
-      "product": 3,
-      "quantity": 54,
-      "reference": "6043089",
-      "purchase_date": "2023-01-06",
-      "created_at": "2023-01-18T05:24:10.839Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 11,
-    "fields": {
-      "product": 1,
-      "quantity": 42,
-      "reference": "6043089",
-      "purchase_date": "2023-01-06",
-      "created_at": "2023-01-18T05:25:28.282Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 12,
-    "fields": {
-      "product": 2,
-      "quantity": 50,
-      "reference": "6135394",
-      "purchase_date": "2023-01-16",
-      "created_at": "2023-01-20T10:26:41.473Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 13,
-    "fields": {
-      "product": 1,
-      "quantity": 100,
-      "reference": "6135394",
-      "purchase_date": "2023-01-16",
-      "created_at": "2023-01-20T10:26:56.901Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 14,
-    "fields": {
-      "product": 4,
-      "quantity": 100,
-      "reference": "6135394",
-      "purchase_date": "2023-01-16",
-      "created_at": "2023-01-20T10:27:46.468Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 15,
-    "fields": {
-      "product": 1,
-      "quantity": 50,
-      "reference": "6265429",
-      "purchase_date": "2023-02-01",
-      "created_at": "2023-02-04T05:24:32.018Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 16,
-    "fields": {
-      "product": 2,
-      "quantity": 80,
-      "reference": "6265429",
-      "purchase_date": "2023-02-01",
-      "created_at": "2023-02-04T05:24:56.386Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 17,
-    "fields": {
-      "product": 3,
-      "quantity": 20,
-      "reference": "6265429",
-      "purchase_date": "2023-02-01",
-      "created_at": "2023-02-04T05:25:11.308Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 18,
-    "fields": {
-      "product": 1,
-      "quantity": 50,
-      "reference": "6265425",
-      "purchase_date": "2023-01-31",
-      "created_at": "2023-02-04T05:32:06.878Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 19,
-    "fields": {
-      "product": 2,
-      "quantity": 50,
-      "reference": "6265425",
-      "purchase_date": "2023-01-31",
-      "created_at": "2023-02-04T05:32:20.792Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 20,
-    "fields": {
-      "product": 3,
-      "quantity": 50,
-      "reference": "6265425",
-      "purchase_date": "2023-01-31",
-      "created_at": "2023-02-04T05:32:31.688Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 21,
-    "fields": {
-      "product": 4,
-      "quantity": 150,
-      "reference": "6297446",
-      "purchase_date": "2023-02-04",
-      "created_at": "2023-02-13T08:29:25.160Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 22,
-    "fields": {
-      "product": 7,
-      "quantity": 100,
-      "reference": "6265529",
-      "purchase_date": "2023-02-07",
-      "created_at": "2023-02-13T08:33:06.939Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 23,
-    "fields": {
-      "product": 5,
-      "quantity": 100,
-      "reference": "6265529",
-      "purchase_date": "2023-02-07",
-      "created_at": "2023-02-13T08:33:39.115Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 24,
-    "fields": {
-      "product": 1,
-      "quantity": 156,
-      "reference": "6549642",
-      "purchase_date": "2023-03-06",
-      "created_at": "2023-03-08T09:17:14.856Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 25,
-    "fields": {
-      "product": 3,
-      "quantity": 70,
-      "reference": "6549642",
-      "purchase_date": "2023-03-06",
-      "created_at": "2023-03-08T09:18:01.973Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 26,
-    "fields": {
-      "product": 2,
-      "quantity": 80,
-      "reference": "6549642",
-      "purchase_date": "2023-03-06",
-      "created_at": "2023-03-08T09:18:34.596Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 27,
-    "fields": {
-      "product": 3,
-      "quantity": 70,
-      "reference": "6726897",
-      "purchase_date": "2023-03-23",
-      "created_at": "2023-03-31T09:32:32.047Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 28,
-    "fields": {
-      "product": 2,
-      "quantity": 130,
-      "reference": "6726897",
-      "purchase_date": "2023-03-23",
-      "created_at": "2023-03-31T09:32:54.797Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 29,
-    "fields": {
-      "product": 1,
-      "quantity": 100,
-      "reference": "6726897",
-      "purchase_date": "2023-03-23",
-      "created_at": "2023-03-31T09:33:14.240Z"
-    }
-  },
-  {
-    "model": "finance.purchase",
-    "pk": 30,
-    "fields": {
-      "product": 4,
-      "quantity": 150,
-      "reference": "6720856",
-      "purchase_date": "2023-03-23",
-      "created_at": "2023-03-31T09:34:03.664Z"
-    }
   }
+
 ]

@@ -42,10 +42,12 @@ class DepositTransaction(BaseTransaction):
         deposit.transaction.transaction_reference = self.reference
         deposit.transaction.balance_before = self.balance_before
         deposit.transaction.balance_after = self.balance_after
+
         deposit.is_confirmed = True
 
         debt = Debt.objects.get_or_create(debtor=self.deposit.transaction.sales_person.user)[0]
         debt.amount = self.debt
+
         deposit.transaction.sales_person.account_balance = self.new_balance
 
         deposit.transaction.sales_person.save()
@@ -57,3 +59,4 @@ class DepositTransaction(BaseTransaction):
 
 class SupplyTransaction(BaseTransaction):
     """ Supply Transaction processor """
+    pass
