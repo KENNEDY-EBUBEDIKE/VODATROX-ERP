@@ -273,28 +273,31 @@ def inventory(request: Request) -> Response:
 def deposits(request: Request) -> Response:
 
     if request.method == "POST":
-        transaction_serializer = TransactionSerializer(data=request.data)
-        if transaction_serializer.is_valid():
-            transaction_serializer.save(
+
+        try:
+            trx = Transaction.objects.create(
+                sales_person=SalesPerson.objects.get(id=int(request.data['sales_person'])),
                 transaction_type="DEPOSIT",
-                sales_person=SalesPerson.objects.get(id=int(request.data['sales_person']))
+                amount=request.data['amount'],
+                transaction_date=request.data['transaction_date'],
+                transaction_details=request.data['transaction_details'],
             )
-
             DepositTransaction.objects.create(
-                transaction=Transaction.objects.get(id=int(transaction_serializer.data['id']))
+                transaction=trx
             )
-
-            return Response({
-                'success': True,
-                'message': "Deposit Lodged Successfully. Kindly Wait for Confirmation"
-            }, status=status.HTTP_200_OK)
-        else:
+        except Exception as e:
+            print(e)
             return Response(
                 data={"success": False,
-                      "message": deposit_serializer.errors
+                      "message": e.args[0]
                       },
                 status=status.HTTP_200_OK
             )
+
+        return Response({
+            'success': True,
+            'message': "Deposit Lodged Successfully. Kindly Wait for Confirmation"
+        }, status=status.HTTP_200_OK)
 
     elif request.method == "DELETE":
         deposit = DepositTransaction.objects.get(id=request.GET['id'])

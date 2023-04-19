@@ -1,0 +1,1370 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add debt",
+      "content_type": 7,
+      "codename": "add_debt"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change debt",
+      "content_type": 7,
+      "codename": "change_debt"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete debt",
+      "content_type": 7,
+      "codename": "delete_debt"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view debt",
+      "content_type": 7,
+      "codename": "view_debt"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add deposit transaction",
+      "content_type": 8,
+      "codename": "add_deposittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change deposit transaction",
+      "content_type": 8,
+      "codename": "change_deposittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete deposit transaction",
+      "content_type": 8,
+      "codename": "delete_deposittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view deposit transaction",
+      "content_type": 8,
+      "codename": "view_deposittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add inventory log",
+      "content_type": 9,
+      "codename": "add_inventorylog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change inventory log",
+      "content_type": 9,
+      "codename": "change_inventorylog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete inventory log",
+      "content_type": 9,
+      "codename": "delete_inventorylog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view inventory log",
+      "content_type": 9,
+      "codename": "view_inventorylog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 10,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 10,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 10,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 10,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add purchase",
+      "content_type": 11,
+      "codename": "add_purchase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change purchase",
+      "content_type": 11,
+      "codename": "change_purchase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete purchase",
+      "content_type": 11,
+      "codename": "delete_purchase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view purchase",
+      "content_type": 11,
+      "codename": "view_purchase"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add sales person",
+      "content_type": 12,
+      "codename": "add_salesperson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change sales person",
+      "content_type": 12,
+      "codename": "change_salesperson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete sales person",
+      "content_type": 12,
+      "codename": "delete_salesperson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view sales person",
+      "content_type": 12,
+      "codename": "view_salesperson"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add transaction",
+      "content_type": 13,
+      "codename": "add_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change transaction",
+      "content_type": 13,
+      "codename": "change_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete transaction",
+      "content_type": 13,
+      "codename": "delete_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view transaction",
+      "content_type": 13,
+      "codename": "view_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add supply transaction",
+      "content_type": 14,
+      "codename": "add_supplytransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change supply transaction",
+      "content_type": 14,
+      "codename": "change_supplytransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete supply transaction",
+      "content_type": 14,
+      "codename": "delete_supplytransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view supply transaction",
+      "content_type": 14,
+      "codename": "view_supplytransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add account",
+      "content_type": 15,
+      "codename": "add_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change account",
+      "content_type": 15,
+      "codename": "change_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete account",
+      "content_type": 15,
+      "codename": "delete_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view account",
+      "content_type": 15,
+      "codename": "view_account"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add transaction",
+      "content_type": 16,
+      "codename": "add_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change transaction",
+      "content_type": 16,
+      "codename": "change_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete transaction",
+      "content_type": 16,
+      "codename": "delete_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view transaction",
+      "content_type": 16,
+      "codename": "view_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add debit transaction",
+      "content_type": 17,
+      "codename": "add_debittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change debit transaction",
+      "content_type": 17,
+      "codename": "change_debittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete debit transaction",
+      "content_type": 17,
+      "codename": "delete_debittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view debit transaction",
+      "content_type": 17,
+      "codename": "view_debittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add credit transaction",
+      "content_type": 18,
+      "codename": "add_credittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change credit transaction",
+      "content_type": 18,
+      "codename": "change_credittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete credit transaction",
+      "content_type": 18,
+      "codename": "delete_credittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view credit transaction",
+      "content_type": 18,
+      "codename": "view_credittransaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 19,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 19,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 19,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 19,
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add token",
+      "content_type": 20,
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change token",
+      "content_type": 20,
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete token",
+      "content_type": 20,
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view token",
+      "content_type": 20,
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "finance",
+      "model": "debt"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "finance",
+      "model": "deposittransaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "finance",
+      "model": "inventorylog"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "finance",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "finance",
+      "model": "purchase"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "finance",
+      "model": "salesperson"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "finance",
+      "model": "transaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "finance",
+      "model": "supplytransaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "account",
+      "model": "account"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "account",
+      "model": "transaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "account",
+      "model": "debittransaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "account",
+      "model": "credittransaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "token"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "tokenproxy"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$p5xsy7TGpeQfhRDEzA24J8$2i0QaE74E4bfbXdOb8ptlrIsMXEjDSo39cP5lcCTvaY=",
+      "last_login": "2023-04-19T11:15:49.550Z",
+      "is_superuser": true,
+      "email": "admin@vodatrox.com",
+      "username": "admin",
+      "first_name": "KENNEDY",
+      "surname": "EZIECHINA",
+      "photo": "",
+      "appointment": "ADMIN",
+      "phone_number": 8034173780,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$GukbhWKZXARUOFh8jEDzs5$/N77LTxkWS/08qwIZdIsM9UHPsERDErkl7w8VYj5yfU=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "esucollins@vodatrox.com",
+      "username": "MARKETING-TEAM-GG-GO-GRAINS",
+      "first_name": "GO-GRAINS",
+      "surname": "MARKETING-TEAM-GG",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 8063856352,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$qTncFV5MPHHWJS1bISRWei$VtjIbYHafocN8wfW1IOdPReMSg8ZwUIMbJZa5rpBCJQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "brighterman6162@gmail.com",
+      "username": "SFA-BRIGHT",
+      "first_name": "BRIGHT",
+      "surname": "SFA",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 8119017260,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$MZWU8a2bhDGxyBbxUxJOf8$0pZdayUSkneh/df5euol1849lOgPM98bHLXUEi+SQRc=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "araghefriday@vodatrox.com",
+      "username": "ARAGHE-FRIDAY",
+      "first_name": "FRIDAY",
+      "surname": "ARAGHE",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 9169843607,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$E5vxAbCnWFmQFv5ezLV4kG$dbOpHW+pRPAB5FVt44Dd5KFv4h6BITSxuIXYlgZGNHc=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "peteruzoma@vodatrox.com",
+      "username": "UZOMA-PETER",
+      "first_name": "PETER",
+      "surname": "UZOMA",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 9080869716,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$oqSVVtfC6xgJm8WC7hWJ8z$7ezLRMSQkXLmL+COMInQFUWSJfr7+iAR06VzM6p8ZBk=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "marcusdamian@vodatrox.com",
+      "username": "MARCUS-DAMIAN",
+      "first_name": "DAMIAN",
+      "surname": "MARCUS",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 8141134025,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$dLcqgkr65uIJI83TjfNPeG$tW1RopFXbkyaHf4ewVIJgF+LN3GWygwHooPldBM0TPk=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "nkporfountain@vodatrox.com",
+      "username": "NKPOR-FOUNTAIN",
+      "first_name": "FOUNTAIN",
+      "surname": "NKPOR",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 8105772299,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$lD4N3ywzvweQd7Sw0Fc3tu$BrPQZRz/p/7JlEbdMuPwjjxpY47NgQ933Y98/s2LlqE=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "adewale@vodatrox.com",
+      "username": "MARKETING-TEAM-MUNCHIT-MUNCHIT",
+      "first_name": "MUNCHIT",
+      "surname": "MARKETING-TEAM-MUNCHIT",
+      "photo": "",
+      "appointment": "SALES PERSON",
+      "phone_number": 8168446269,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$W491lGWTxV4SCqMH8PBfc6$+1GhUlYC2kdSagBDXxqvtgCSV9VH1CSpbMv/TvBsG9c=",
+      "last_login": "2023-04-19T12:12:23.621Z",
+      "is_superuser": false,
+      "email": "eziechinaamaka@gmail.com",
+      "username": "EZIECHINA-AMAKA",
+      "first_name": "AMAKA",
+      "surname": "EZIECHINA",
+      "photo": "",
+      "appointment": "STAFF",
+      "phone_number": 9082264873,
+      "created_at": "2023-04-19",
+      "is_active": true,
+      "is_staff": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "account_balance": -1026350
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "account_balance": -16200
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 3,
+    "fields": {
+      "user": 4,
+      "account_balance": -277500
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 4,
+    "fields": {
+      "user": 5,
+      "account_balance": -291850
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 5,
+    "fields": {
+      "user": 6,
+      "account_balance": 0
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 6,
+    "fields": {
+      "user": 7,
+      "account_balance": -27000
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 7,
+    "fields": {
+      "user": 8,
+      "account_balance": -439200
+    }
+  },
+  {
+    "model": "finance.salesperson",
+    "pk": 8,
+    "fields": {
+      "user": 9,
+      "account_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 1,
+    "fields": {
+      "name": "MUNCHIT SWEET SURPRISE",
+      "alias_name": "SWEET SURPRISE",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 2,
+    "fields": {
+      "name": "MUNCHIT CREAMY CRUNCH",
+      "alias_name": "CREAMY CRUNCH",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 3,
+    "fields": {
+      "name": "MUNCHIT CHEESY STIX",
+      "alias_name": "CHEESY STIX",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 4,
+    "fields": {
+      "name": "MUNCHIT PUFF CHEESE BALLS",
+      "alias_name": "CHEESE BALLS",
+      "cost_price": 4600,
+      "selling_price": 5000,
+      "stock_balance": 15
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 5,
+    "fields": {
+      "name": "GO-GRAINS 900G",
+      "alias_name": "GG 900G",
+      "cost_price": 8400,
+      "selling_price": 8700,
+      "stock_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 6,
+    "fields": {
+      "name": "GO-GRAINS 450G",
+      "alias_name": "GG 450G",
+      "cost_price": 9200,
+      "selling_price": 9500,
+      "stock_balance": 0
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 7,
+    "fields": {
+      "name": "GO-GRAINS 45G",
+      "alias_name": "GG 45G",
+      "cost_price": 7600,
+      "selling_price": 8000,
+      "stock_balance": 42
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 1,
+    "fields": {
+      "debtor": 2,
+      "amount": 1026350
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 2,
+    "fields": {
+      "debtor": 3,
+      "amount": 16200
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 3,
+    "fields": {
+      "debtor": 4,
+      "amount": 277500
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 4,
+    "fields": {
+      "debtor": 5,
+      "amount": 291850
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 5,
+    "fields": {
+      "debtor": 6,
+      "amount": 0
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 6,
+    "fields": {
+      "debtor": 7,
+      "amount": 27000
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 7,
+    "fields": {
+      "debtor": 8,
+      "amount": 439200
+    }
+  },
+  {
+    "model": "finance.debt",
+    "pk": 8,
+    "fields": {
+      "debtor": 9,
+      "amount": 0
+    }
+  },
+  {
+    "model": "account.account",
+    "pk": 1,
+    "fields": {
+      "account_name": "VODATROX LTD",
+      "bank_name": "STANBIC IBTC BANK",
+      "type": "BANK",
+      "account_balance": 1835260
+    }
+  },
+  {
+    "model": "account.account",
+    "pk": 2,
+    "fields": {
+      "account_name": "VODATROX LTD",
+      "bank_name": "PROVIDUS BANK",
+      "type": "BANK",
+      "account_balance": 1344460
+    }
+  },
+  {
+    "model": "account.account",
+    "pk": 3,
+    "fields": {
+      "account_name": "VODATROX LTD",
+      "bank_name": "VODATROX LTD CASH ACCOUNT",
+      "type": "CASH",
+      "account_balance": 0
+    }
+  },
+  {
+    "model": "account.transaction",
+    "pk": 1,
+    "fields": {
+      "initiator": "KENNEDY EZIECHINA",
+      "amount": "1344460.00",
+      "balance_before": 0,
+      "balance_after": 1344460,
+      "source": "CAPITAL",
+      "transaction_type": "CREDIT",
+      "transaction_details": "Capital in Providus as at when Upgrade was made",
+      "transaction_reference": "CAP/0001",
+      "transaction_date": "2023-04-19T11:29:26.650Z",
+      "created_at": "2023-04-19T11:29:26.650Z"
+    }
+  },
+  {
+    "model": "account.transaction",
+    "pk": 2,
+    "fields": {
+      "initiator": "KENNEDY EZIECHINA",
+      "amount": "1835260.00",
+      "balance_before": 0,
+      "balance_after": 1835260,
+      "source": "CAPITAL",
+      "transaction_type": "CREDIT",
+      "transaction_details": "Capital in Stanbic as at when Upgrade was made",
+      "transaction_reference": "CAP/0002",
+      "transaction_date": "2023-04-19T11:32:02.801Z",
+      "created_at": "2023-04-19T11:32:02.801Z"
+    }
+  },
+  {
+    "model": "account.credittransaction",
+    "pk": 1,
+    "fields": {
+      "transaction": 1,
+      "account": 2
+    }
+  },
+  {
+    "model": "account.credittransaction",
+    "pk": 2,
+    "fields": {
+      "transaction": 2,
+      "account": 1
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "7ab09928e7e500529b35c2c41c82278028ba510f",
+    "fields": {
+      "user": 9,
+      "created": "2023-04-19T12:12:23.582Z"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "a4f943f3facc63b110badf433eeae4d912d3d66a",
+    "fields": {
+      "user": 1,
+      "created": "2023-04-19T11:15:49.514Z"
+    }
+  }
+]
