@@ -9,9 +9,7 @@ from apps.users.serializers import *
 from utilities import account_transaction_factory, finance_transaction_factory
 import datetime
 from apps.account.models import Account
-from django.db.models import F, Value, CharField
-from itertools import chain
-import json
+from django.db.models import F, Value, CharField, Sum
 
 
 @api_view(["GET"])
@@ -63,7 +61,12 @@ def purchase(request: Request) -> Response:
                 source="PURCHASE ORDER",
             )
             if debit:
-                purchase_serializer.save(product=product, debit=debit, amount=amount)
+                purchase_serializer.save(
+                    product=product,
+                    debit=debit,
+                    amount=amount,
+                    expected_revenue=(quantity * product.selling_price)
+                )
 
         else:
             return Response(
@@ -108,12 +111,13 @@ def confirm_purchase_delivery(request: Request) -> Response:
     if request.method == "PATCH":
         p = Purchase.objects.get(id=request.data['id'])
         p.invoice_reference = request.data.get('invoice_reference')
-        p.product.change_stock_balance(
+        log = p.product.change_stock_balance(
             p.quantity,
             direction="INC",
             details=f"PURCHASE OF {p.quantity} CARTONS OF {p.product.name}",
         )
         p.is_delivered = True
+        p.log = log
         p.save()
         return Response({
             'success': True,
@@ -217,9 +221,18 @@ def inventory(request: Request) -> Response:
             }, status=status.HTTP_200_OK)
         else:
             products = Product.objects.all().order_by('-stock_balance')
+
+            # annotate adds a new field 'stock_value' to the Qs.
+            # aggregate works on a particular field in a Qs (in this case, sum operation) and
+            # returns a dict as the result of the operation.
+            total_stock_value = products.annotate(
+                stock_value=F('cost_price') * F('stock_balance')).aggregate(Sum('stock_value'))['stock_value__sum']
+
             return Response({
                 'success': True,
-                'products': ProductSerializer(products, many=True).data
+                'products': ProductSerializer(products, many=True).data,
+                'total_stock_balance': products.aggregate(Sum('stock_balance'))['stock_balance__sum'],
+                'total_stock_value': total_stock_value
             })
 
     if request.method == "POST":

@@ -28,7 +28,6 @@ class Account(models.Model):
             md = CreditTransaction
         else:
             return None
-
         trx = Transaction.objects.create(
             initiator=initiator,
             amount=amount,
@@ -45,7 +44,6 @@ class Account(models.Model):
             transaction=trx,
             account=self
         )
-
         self.account_balance = ba
         self.save()
 
@@ -70,6 +68,14 @@ class Transaction(models.Model):
 
     def __str__(self):
         return self.initiator
+
+    def get_account(self):
+
+        if self.transaction_type == "CREDIT":
+            return self.credit.account
+
+        elif self.transaction_type == "DEBIT":
+            return self.debit.account
 
 
 class CreditTransaction(models.Model):

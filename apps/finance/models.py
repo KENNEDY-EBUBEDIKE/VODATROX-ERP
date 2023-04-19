@@ -109,6 +109,9 @@ class Product(models.Model):
 
         return log
 
+    def get_stock_value(self):
+        return self.stock_balance * self.cost_price
+
     def __str__(self):
         return self.name
 
@@ -121,6 +124,7 @@ class Purchase(models.Model):
     amount = models.IntegerField(null=False, blank=False, default=0)
     order_reference = models.CharField(max_length=100, blank=True, null=True)
     invoice_reference = models.CharField(max_length=100, blank=True, null=True)
+    expected_revenue = models.IntegerField(null=False, blank=False, default=0)
     purchase_date = models.DateField(auto_now=False)
     is_delivered = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)

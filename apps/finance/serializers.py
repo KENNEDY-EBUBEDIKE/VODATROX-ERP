@@ -25,9 +25,14 @@ class TransactionSerializer(ModelSerializer):
 
 
 class ProductSerializer(ModelSerializer):
+    stock_value = serializers.SerializerMethodField()
+
     class Meta:
         model = Product
         fields = '__all__'
+
+    def get_stock_value(self, obj):
+        return obj.get_stock_value()
 
 
 class SupplyTransactionSerializer(ModelSerializer):
