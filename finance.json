@@ -1,0 +1,5152 @@
+[
+  {
+    "model": "finance.stockinventory",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "stock_balance": 89
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "stock_balance": 83
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "stock_balance": 32
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 4,
+    "fields": {
+      "product": 4,
+      "stock_balance": 106
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 5,
+    "fields": {
+      "product": 5,
+      "stock_balance": 39
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 6,
+    "fields": {
+      "product": 6,
+      "stock_balance": 1
+    }
+  },
+  {
+    "model": "finance.stockinventory",
+    "pk": 7,
+    "fields": {
+      "product": 7,
+      "stock_balance": 60
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 1,
+    "fields": {
+      "name": "MUNCHIT SWEET SURPRISE",
+      "alias_name": "SWEET SURPRISE",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 100
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 2,
+    "fields": {
+      "name": "MUNCHIT CREAMY CRUNCH",
+      "alias_name": "CREAMY CRUNCH",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 89
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 3,
+    "fields": {
+      "name": "MUNCHIT CHEESY STIX",
+      "alias_name": "CHEESY STIX",
+      "cost_price": 5100,
+      "selling_price": 5400,
+      "stock_balance": 90
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 4,
+    "fields": {
+      "name": "MUNCHIT PUFF CHEESE BALLS",
+      "alias_name": "CHEESE BALLS",
+      "cost_price": 4600,
+      "selling_price": 5000,
+      "stock_balance": 80
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 5,
+    "fields": {
+      "name": "GO-GRAINS 900G",
+      "alias_name": "GG 900G",
+      "cost_price": 8400,
+      "selling_price": 8700,
+      "stock_balance": 76
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 6,
+    "fields": {
+      "name": "GO-GRAINS 450G",
+      "alias_name": "GG 450G",
+      "cost_price": 9200,
+      "selling_price": 9500,
+      "stock_balance": 70
+    }
+  },
+  {
+    "model": "finance.product",
+    "pk": 7,
+    "fields": {
+      "name": "GO-GRAINS 45G",
+      "alias_name": "GG 45G",
+      "cost_price": 7600,
+      "selling_price": 8000,
+      "stock_balance": 10
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 3,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 75700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-11-30",
+      "created_at": "2022-11-30T23:58:12.237Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 4,
+    "fields": {
+      "depositor": "NNAMDI",
+      "amount": 51500,
+      "is_confirmed": true,
+      "date_of_payment": "2022-11-30",
+      "created_at": "2022-12-01T15:30:25.288Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 5,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 150000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-01",
+      "created_at": "2022-12-01T15:30:59.365Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 6,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 105500,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-01",
+      "created_at": "2022-12-01T15:38:13.588Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 7,
+    "fields": {
+      "depositor": "LOVINA",
+      "amount": 49000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-11-30",
+      "created_at": "2022-12-02T10:57:00.368Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 8,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 77500,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-01",
+      "created_at": "2022-12-01T15:40:16.082Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 9,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 77550,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-03",
+      "created_at": "2022-12-09T00:19:37.679Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 10,
+    "fields": {
+      "depositor": "AMARA-GG",
+      "amount": 8700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-03",
+      "created_at": "2022-12-09T00:19:49.911Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 12,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 129100,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-07",
+      "created_at": "2022-12-09T00:20:15.582Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 13,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 65000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-08",
+      "created_at": "2022-12-09T00:20:05.393Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 14,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 110000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-07",
+      "created_at": "2022-12-09T00:19:43.596Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 15,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 63700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-08",
+      "created_at": "2022-12-09T00:14:33.228Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 16,
+    "fields": {
+      "depositor": "NNAMDI",
+      "amount": 23500,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-09",
+      "created_at": "2022-12-13T18:39:18.495Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 17,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 158950,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-09",
+      "created_at": "2022-12-13T18:39:57.255Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 18,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 79500,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-10",
+      "created_at": "2022-12-13T18:39:48.876Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 19,
+    "fields": {
+      "depositor": "NNAMDI",
+      "amount": 50000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-13",
+      "created_at": "2022-12-13T18:39:08.916Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 20,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 83650,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-10",
+      "created_at": "2022-12-13T18:39:43.720Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 21,
+    "fields": {
+      "depositor": "IFEOMA-GG",
+      "amount": 17400,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-09",
+      "created_at": "2022-12-13T18:39:23.830Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 22,
+    "fields": {
+      "depositor": "AMARA-GG",
+      "amount": 17400,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-09",
+      "created_at": "2022-12-13T18:39:35.145Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 23,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 160000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-14",
+      "created_at": "2022-12-15T21:04:00.176Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 24,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 93000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-15",
+      "created_at": "2022-12-15T21:03:36.119Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 25,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 70000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-14",
+      "created_at": "2022-12-15T21:04:06.870Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 26,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 145000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-15",
+      "created_at": "2022-12-15T21:03:30.078Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 27,
+    "fields": {
+      "depositor": "IFEOMA-GG",
+      "amount": 8700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-15",
+      "created_at": "2022-12-15T21:03:49.672Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 28,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 34300,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-17",
+      "created_at": "2022-12-22T00:48:37.748Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 29,
+    "fields": {
+      "depositor": "AMAKA",
+      "amount": 22000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-20",
+      "created_at": "2022-12-31T12:27:48.208Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 30,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 80000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-23",
+      "created_at": "2023-01-05T11:27:51.421Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 31,
+    "fields": {
+      "depositor": "IFEOMA-GG",
+      "amount": 8700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-22",
+      "created_at": "2022-12-31T12:31:23.267Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 32,
+    "fields": {
+      "depositor": "AMARA-GG",
+      "amount": 8700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-22",
+      "created_at": "2022-12-31T12:31:13.663Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 33,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 97200,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-24",
+      "created_at": "2023-01-05T11:27:38.208Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 34,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 74000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-24",
+      "created_at": "2023-01-05T11:27:41.150Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 35,
+    "fields": {
+      "depositor": "AMAKA",
+      "amount": 8700,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-24",
+      "created_at": "2023-01-05T11:27:46.799Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 36,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 93000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-20",
+      "created_at": "2022-12-31T12:27:39.917Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 37,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 81000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-23",
+      "created_at": "2022-12-31T12:40:29.836Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 38,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 217000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-23",
+      "created_at": "2022-12-31T14:21:53.843Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 39,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 57000,
+      "is_confirmed": true,
+      "date_of_payment": "2022-12-29",
+      "created_at": "2023-01-05T11:27:35.408Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 40,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 144100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-06",
+      "created_at": "2023-01-11T09:18:28.329Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 41,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 21000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-05",
+      "created_at": "2023-01-12T23:34:57.725Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 42,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 77300,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-06",
+      "created_at": "2023-01-12T23:34:46.832Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 43,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 23000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-10",
+      "created_at": "2023-01-12T23:34:36.005Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 44,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 93600,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-09",
+      "created_at": "2023-01-12T15:38:10.542Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 45,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 47700,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-11",
+      "created_at": "2023-01-12T23:33:51.805Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 46,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 45000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-11",
+      "created_at": "2023-01-12T23:33:54.728Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 47,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 74000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-11",
+      "created_at": "2023-01-12T23:33:47.224Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 48,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 68100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-12",
+      "created_at": "2023-01-12T23:33:13.780Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 49,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 74300,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-12",
+      "created_at": "2023-01-12T23:33:42.643Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 50,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 58500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-13",
+      "created_at": "2023-01-20T10:18:13.077Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 51,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 137200,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-14",
+      "created_at": "2023-01-20T10:18:47.199Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 52,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 184000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-14",
+      "created_at": "2023-01-20T10:18:58.498Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 53,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 139100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-14",
+      "created_at": "2023-01-20T10:18:53.382Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 54,
+    "fields": {
+      "depositor": "CHIOMA JANE-GG",
+      "amount": 75450,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-17",
+      "created_at": "2023-01-18T05:16:20.878Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 55,
+    "fields": {
+      "depositor": "IFEOMA-GG",
+      "amount": 34100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-14",
+      "created_at": "2023-01-18T05:16:55.236Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 56,
+    "fields": {
+      "depositor": "FIDELIA-GG",
+      "amount": 69000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-14",
+      "created_at": "2023-01-18T17:47:39.854Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 57,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 102000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-18",
+      "created_at": "2023-01-20T10:18:27.698Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 58,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 111000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-18",
+      "created_at": "2023-01-20T10:18:30.095Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 59,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 39900,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-18",
+      "created_at": "2023-01-20T10:18:24.628Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 60,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 70500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-19",
+      "created_at": "2023-01-26T22:00:41.476Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 61,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 93500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-19",
+      "created_at": "2023-01-26T22:00:49.211Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 62,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 128000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-20",
+      "created_at": "2023-01-20T10:41:34.566Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 63,
+    "fields": {
+      "depositor": "CHIOMA JANE-GG",
+      "amount": 8050,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-20",
+      "created_at": "2023-01-26T22:00:58.980Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 64,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 71450,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-21",
+      "created_at": "2023-01-26T22:01:05.399Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 65,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 107100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-21",
+      "created_at": "2023-01-26T22:00:35.257Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 66,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 56000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-21",
+      "created_at": "2023-01-26T22:01:10.378Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 67,
+    "fields": {
+      "depositor": "FIDELIA-GG",
+      "amount": 49000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-24",
+      "created_at": "2023-01-24T18:29:36.963Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 68,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 95000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-24",
+      "created_at": "2023-01-26T22:00:29.639Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 69,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 198300,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-20",
+      "created_at": "2023-01-24T18:32:17.202Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 70,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 54000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-25",
+      "created_at": "2023-01-25T20:45:18.936Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 72,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 113000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-25",
+      "created_at": "2023-01-26T22:00:12.193Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 73,
+    "fields": {
+      "depositor": "AMAKA",
+      "amount": 15200,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-25",
+      "created_at": "2023-01-26T22:00:22.669Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 74,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 29000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-25",
+      "created_at": "2023-01-26T22:00:17.714Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 76,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 90800,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T22:00:03.305Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 77,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 108800,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T21:59:58.516Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 78,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 117700,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T20:53:52.031Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 79,
+    "fields": {
+      "depositor": "COLLINS SUPERVISOR-GG",
+      "amount": 73400,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T21:51:13.222Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 80,
+    "fields": {
+      "depositor": "IFEOMA-GG",
+      "amount": 34800,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T21:54:14.410Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 81,
+    "fields": {
+      "depositor": "FIDELIA-GG",
+      "amount": 20000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-26",
+      "created_at": "2023-01-26T21:54:49.751Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 82,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 135000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-27",
+      "created_at": "2023-01-28T16:32:07.705Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 83,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 112000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-27",
+      "created_at": "2023-01-28T16:32:17.761Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 84,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 36000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-27",
+      "created_at": "2023-01-28T16:32:20.502Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 85,
+    "fields": {
+      "depositor": "OGO",
+      "amount": 187900,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-27",
+      "created_at": "2023-01-28T16:32:01.069Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 86,
+    "fields": {
+      "depositor": "JOY",
+      "amount": 120700,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-27",
+      "created_at": "2023-01-28T16:32:14.645Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 87,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 141350,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-28",
+      "created_at": "2023-01-29T17:46:43.513Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 88,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 200000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-28",
+      "created_at": "2023-01-29T17:46:33.719Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 89,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 38100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-28",
+      "created_at": "2023-02-01T16:34:21.350Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 90,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 91800,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-01",
+      "created_at": "2023-02-01T16:35:45.958Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 91,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 90000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-01",
+      "created_at": "2023-02-01T16:35:43.595Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 92,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 25000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-02",
+      "created_at": "2023-02-04T18:32:23.271Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 93,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 70700,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-02",
+      "created_at": "2023-02-04T18:32:46.396Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 94,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 66100,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-03",
+      "created_at": "2023-02-04T18:40:26.976Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 95,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 85000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-04",
+      "created_at": "2023-02-04T18:40:11.376Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 96,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 110000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-04",
+      "created_at": "2023-02-04T18:39:58.165Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 98,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 30000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-07",
+      "created_at": "2023-02-07T11:54:36.470Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 99,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 40000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-06",
+      "created_at": "2023-02-07T11:54:53.463Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 100,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 15000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-07",
+      "created_at": "2023-02-20T08:43:55.135Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 101,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 107000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-08",
+      "created_at": "2023-02-08T14:03:45.297Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 102,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 110000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-09",
+      "created_at": "2023-02-21T07:26:40.841Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 103,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 96000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-10",
+      "created_at": "2023-02-20T08:45:38.189Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 104,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 5000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-10",
+      "created_at": "2023-02-21T07:56:41.345Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 105,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 124000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-11",
+      "created_at": "2023-02-20T08:44:06.537Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 106,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 100000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-13",
+      "created_at": "2023-02-21T07:26:18.817Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 107,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 80000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-15",
+      "created_at": "2023-02-20T08:45:51.580Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 108,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 25000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-15",
+      "created_at": "2023-02-21T07:26:25.975Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 109,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 68000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-13",
+      "created_at": "2023-02-22T18:20:55.844Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 110,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 40000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-21",
+      "created_at": "2023-02-22T18:21:00.366Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 111,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 200000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-25",
+      "created_at": "2023-02-25T09:29:05.823Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 112,
+    "fields": {
+      "depositor": "COLLINS SUPERVISOR-GG",
+      "amount": 17400,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-22",
+      "created_at": "2023-02-25T09:28:59.411Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 113,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 74000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-24",
+      "created_at": "2023-03-04T07:09:05.619Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 114,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 110000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-28",
+      "created_at": "2023-03-04T07:42:57.983Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 115,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 100000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-28",
+      "created_at": "2023-03-04T07:44:59.172Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 116,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 68000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-01",
+      "created_at": "2023-03-04T07:13:42.518Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 117,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 170000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-02",
+      "created_at": "2023-03-04T07:12:13.358Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 118,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 210000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-03",
+      "created_at": "2023-03-04T07:10:14.044Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 119,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 30000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-01-24",
+      "created_at": "2023-03-04T07:09:34.945Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 120,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 81000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-03",
+      "created_at": "2023-03-04T07:10:05.404Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 121,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 20000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-07",
+      "created_at": "2023-03-08T18:17:17.775Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 122,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 48000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-08",
+      "created_at": "2023-03-08T18:16:22.117Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 123,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 13000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-08",
+      "created_at": "2023-03-10T17:56:02.851Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 124,
+    "fields": {
+      "depositor": "FIDELIA-GG",
+      "amount": 17500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-02-25",
+      "created_at": "2023-03-20T08:12:01.112Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 125,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 130000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-09",
+      "created_at": "2023-03-10T17:56:06.797Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 126,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 190000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-09",
+      "created_at": "2023-03-10T16:48:26.559Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 127,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 25000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-10",
+      "created_at": "2023-03-10T16:48:21.556Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 128,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 58000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-10",
+      "created_at": "2023-03-10T17:56:11.441Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 129,
+    "fields": {
+      "depositor": "COLLINS SUPERVISOR-GG",
+      "amount": 8000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-15",
+      "created_at": "2023-03-17T18:48:49.730Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 130,
+    "fields": {
+      "depositor": "FOUNTAIN",
+      "amount": 54000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-17",
+      "created_at": "2023-03-17T18:49:37.698Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 131,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 74500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-17",
+      "created_at": "2023-03-20T08:11:49.037Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 132,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 55000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-14",
+      "created_at": "2023-03-17T18:48:54.748Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 133,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 30000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-17",
+      "created_at": "2023-03-17T18:54:51.682Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 134,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 110000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-18",
+      "created_at": "2023-03-20T08:11:54.234Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 135,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 51000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-22",
+      "created_at": "2023-03-23T17:03:29.671Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 136,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 2200,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-22",
+      "created_at": "2023-03-23T16:02:12.883Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 138,
+    "fields": {
+      "depositor": "MUNCH-IT MARKETING TEAM",
+      "amount": 247200,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-22",
+      "created_at": "2023-03-23T17:03:40.802Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 139,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 151000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-24",
+      "created_at": "2023-03-29T09:05:40.615Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 140,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 150000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-24",
+      "created_at": "2023-03-29T09:05:33.885Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 141,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 50000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-28",
+      "created_at": "2023-03-29T09:05:13.269Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 142,
+    "fields": {
+      "depositor": "FRIDAY",
+      "amount": 3500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-28",
+      "created_at": "2023-03-31T09:16:17.591Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 143,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 101500,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-29",
+      "created_at": "2023-03-31T09:46:52.330Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 144,
+    "fields": {
+      "depositor": "PETER",
+      "amount": 120000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-30",
+      "created_at": "2023-03-31T09:59:55.640Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 145,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 76900,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-30",
+      "created_at": "2023-03-31T09:59:34.336Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 146,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 84000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-29",
+      "created_at": "2023-03-31T09:18:46.456Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 147,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 80000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-30",
+      "created_at": "2023-03-31T09:18:57.474Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 149,
+    "fields": {
+      "depositor": "MUNCH-IT MARKETING TEAM",
+      "amount": 56650,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-30",
+      "created_at": "2023-03-31T09:46:56.659Z"
+    }
+  },
+  {
+    "model": "finance.deposit",
+    "pk": 150,
+    "fields": {
+      "depositor": "MARKETING TEAM",
+      "amount": 250000,
+      "is_confirmed": true,
+      "date_of_payment": "2023-03-21",
+      "created_at": "2023-03-31T10:18:33.180Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 4,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-11-30T23:39:11.845Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 5,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 20,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-11-30T23:39:57.026Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 6,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-11-30T23:50:58.822Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 7,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 3,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-11-30T23:51:38.823Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 8,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-12-01T15:42:36.341Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 9,
+    "fields": {
+      "sales_person": "LOVINA",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-11-30",
+      "created_at": "2022-12-01T15:43:22.546Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 10,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-12-01T15:43:54.157Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 11,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-12-01T15:44:25.087Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 13,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-02",
+      "created_at": "2022-12-02T19:12:19.360Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 15,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2022-12-02",
+      "created_at": "2022-12-02T19:13:39.519Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 16,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2022-12-02",
+      "created_at": "2022-12-02T19:14:24.300Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 17,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-12-02",
+      "created_at": "2022-12-02T19:15:10.853Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 18,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 2,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:30:52.452Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 19,
+    "fields": {
+      "sales_person": "AMARA-GG",
+      "product": 5,
+      "quantity": 2,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:31:19.333Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 20,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:32:46.692Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 21,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:33:11.893Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 22,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:33:33.827Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 23,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-03T16:33:55.246Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 24,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-12-03T16:42:16.938Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 25,
+    "fields": {
+      "sales_person": "AMARA-GG",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-01",
+      "created_at": "2022-12-03T16:42:44.711Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 26,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2022-12-06",
+      "created_at": "2022-12-06T09:47:56.173Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 27,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2022-12-06",
+      "created_at": "2022-12-06T09:48:33.160Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 28,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2022-12-06",
+      "created_at": "2022-12-06T09:49:11.439Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 29,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 3,
+      "date_supplied": "2022-12-06",
+      "created_at": "2022-12-06T09:49:38.002Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 34,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-07",
+      "created_at": "2022-12-07T09:12:19.598Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 35,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 3,
+      "date_supplied": "2022-12-07",
+      "created_at": "2022-12-07T09:13:57.153Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 36,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 9,
+      "date_supplied": "2022-12-07",
+      "created_at": "2022-12-07T09:14:49.937Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 37,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 4,
+      "quantity": 20,
+      "date_supplied": "2022-12-03",
+      "created_at": "2022-12-08T08:26:25.817Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 38,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2022-12-08",
+      "created_at": "2022-12-08T08:41:29.205Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 39,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 2,
+      "date_supplied": "2022-12-08",
+      "created_at": "2022-12-08T08:43:09.769Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 40,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 1,
+      "date_supplied": "2022-12-08",
+      "created_at": "2022-12-08T08:43:38.569Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 41,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 1,
+      "date_supplied": "2022-12-08",
+      "created_at": "2022-12-08T08:44:01.383Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 42,
+    "fields": {
+      "sales_person": "NNAMDI",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-12-09",
+      "created_at": "2022-12-09T10:20:53.227Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 43,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2022-12-09",
+      "created_at": "2022-12-09T10:21:20.373Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 44,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2022-12-09",
+      "created_at": "2022-12-09T10:21:48.970Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 45,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-09",
+      "created_at": "2022-12-09T10:22:10.748Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 46,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-12-09",
+      "created_at": "2022-12-09T10:22:34.864Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 48,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T08:51:48.879Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 49,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T08:52:32.537Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 52,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T08:53:31.652Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 53,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 1,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T10:00:24.656Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 54,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 2,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T10:01:22.336Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 55,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T10:01:39.680Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 56,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 4,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T10:02:04.406Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 58,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2022-12-10",
+      "created_at": "2022-12-10T19:12:31.309Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 59,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 7,
+      "date_supplied": "2022-12-15",
+      "created_at": "2022-12-15T09:18:59.824Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 60,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2022-12-15",
+      "created_at": "2022-12-15T09:19:40.370Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 61,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2022-12-15",
+      "created_at": "2022-12-15T09:23:09.491Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 62,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-15",
+      "created_at": "2022-12-15T13:45:27.834Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 63,
+    "fields": {
+      "sales_person": "AMARA-GG",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-15",
+      "created_at": "2022-12-15T13:45:57.926Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 64,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2022-12-14",
+      "created_at": "2022-12-15T13:52:35.260Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 65,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-14",
+      "created_at": "2022-12-15T13:52:54.091Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 66,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-14",
+      "created_at": "2022-12-15T13:53:22.688Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 67,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2022-12-14",
+      "created_at": "2022-12-15T13:53:44.453Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 68,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T13:36:23.912Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 69,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T13:36:50.256Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 70,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 12,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T15:43:49.726Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 71,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 3,
+      "quantity": 8,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T15:44:21.080Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 72,
+    "fields": {
+      "sales_person": "CHIOMA JANE-GG",
+      "product": 7,
+      "quantity": 5,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T16:55:06.743Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 73,
+    "fields": {
+      "sales_person": "CHIOMA JANE-GG",
+      "product": 5,
+      "quantity": 5,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T16:55:36.725Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 76,
+    "fields": {
+      "sales_person": "AMAKA",
+      "product": 4,
+      "quantity": 1,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T17:13:09.819Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 77,
+    "fields": {
+      "sales_person": "AMAKA",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T17:13:58.555Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 78,
+    "fields": {
+      "sales_person": "AMAKA",
+      "product": 1,
+      "quantity": 1,
+      "date_supplied": "2022-12-20",
+      "created_at": "2022-12-20T17:14:35.353Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 80,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:37:24.923Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 81,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 3,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:37:44.340Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 82,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:38:10.062Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 84,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:39:13.668Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 85,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:39:31.675Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 86,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 2,
+      "date_supplied": "2022-12-23",
+      "created_at": "2022-12-23T10:39:57.117Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 87,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:23:48.969Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 88,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:24:10.720Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 89,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:24:40.400Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 90,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:28:10.967Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 91,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:28:31.078Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 92,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:29:12.466Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 93,
+    "fields": {
+      "sales_person": "AMAKA",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2022-12-24",
+      "created_at": "2022-12-24T15:30:21.169Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 94,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 8,
+      "date_supplied": "2023-01-05",
+      "created_at": "2023-01-05T10:54:18.521Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 95,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-05",
+      "created_at": "2023-01-05T10:54:58.929Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 96,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-05",
+      "created_at": "2023-01-05T10:55:18.499Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 97,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-05",
+      "created_at": "2023-01-05T10:56:10.007Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 98,
+    "fields": {
+      "sales_person": "BRIGHT",
+      "product": 1,
+      "quantity": 2,
+      "date_supplied": "2022-12-24",
+      "created_at": "2023-01-05T15:22:42.004Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 99,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-06",
+      "created_at": "2023-01-06T13:06:44.114Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 100,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-01-10",
+      "created_at": "2023-01-11T06:06:14.498Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 101,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-10",
+      "created_at": "2023-01-11T06:06:36.695Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 102,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 20,
+      "date_supplied": "2023-01-10",
+      "created_at": "2023-01-11T06:07:11.616Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 103,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2023-01-10",
+      "created_at": "2023-01-11T06:07:49.235Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 104,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 15,
+      "date_supplied": "2023-01-11",
+      "created_at": "2023-01-11T17:58:45.309Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 105,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 15,
+      "date_supplied": "2023-01-11",
+      "created_at": "2023-01-11T17:59:27.336Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 106,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 2,
+      "date_supplied": "2023-01-11",
+      "created_at": "2023-01-11T18:01:24.618Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 107,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 7,
+      "quantity": 1,
+      "date_supplied": "2023-01-11",
+      "created_at": "2023-01-11T18:01:55.258Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 110,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 7,
+      "quantity": 2,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-12T14:04:31.415Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 111,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-12T14:06:14.051Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 112,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 7,
+      "quantity": 2,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-12T14:07:01.186Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 113,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-12T14:07:20.411Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 114,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2022-12-15",
+      "created_at": "2023-01-12T14:51:09.581Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 115,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 3,
+      "date_supplied": "2022-12-15",
+      "created_at": "2023-01-12T14:52:18.741Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 116,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2022-12-15",
+      "created_at": "2023-01-12T14:53:18.499Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 117,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 20,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-14T12:21:46.147Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 118,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-14T12:22:09.239Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 119,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 11,
+      "date_supplied": "2023-01-13",
+      "created_at": "2023-01-14T12:37:14.814Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 120,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 15,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-14T12:39:14.037Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 121,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-14T12:40:17.748Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 122,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 4,
+      "quantity": 20,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-14T12:40:48.055Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 123,
+    "fields": {
+      "sales_person": "FIDELIA-GG",
+      "product": 7,
+      "quantity": 14,
+      "date_supplied": "2023-01-07",
+      "created_at": "2023-01-14T12:44:52.508Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 124,
+    "fields": {
+      "sales_person": "FIDELIA-GG",
+      "product": 5,
+      "quantity": 5,
+      "date_supplied": "2023-01-07",
+      "created_at": "2023-01-14T12:45:24.835Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 125,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2023-01-06",
+      "created_at": "2023-01-14T12:49:46.440Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 126,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 10,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-17T22:56:45.543Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 127,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-12",
+      "created_at": "2023-01-17T22:57:19.956Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 128,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 6,
+      "date_supplied": "2023-01-13",
+      "created_at": "2023-01-17T22:58:03.494Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 129,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2023-01-13",
+      "created_at": "2023-01-17T22:58:35.690Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 130,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 9,
+      "date_supplied": "2023-01-13",
+      "created_at": "2023-01-17T22:59:05.130Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 131,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T22:59:49.189Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 132,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:00:18.052Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 133,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:00:43.542Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 134,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:02:39.748Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 135,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:03:09.875Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 136,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:03:48.289Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 137,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:04:15.347Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 138,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 3,
+      "quantity": 8,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:04:36.219Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 139,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 2,
+      "quantity": 12,
+      "date_supplied": "2023-01-14",
+      "created_at": "2023-01-17T23:05:00.497Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 140,
+    "fields": {
+      "sales_person": "IFEOMA-GG",
+      "product": 5,
+      "quantity": 4,
+      "date_supplied": "2023-01-17",
+      "created_at": "2023-01-18T09:30:05.846Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 141,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 7,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-18T09:52:11.297Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 142,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-18T09:52:34.526Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 143,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-18T09:53:15.683Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 144,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-18T09:53:46.177Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 145,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:26:43.700Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 146,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:27:08.279Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 147,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:27:37.254Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 148,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:28:11.047Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 149,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:29:34.616Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 150,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:32:07.844Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 151,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:32:29.217Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 152,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 8,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:32:47.673Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 153,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-19T15:33:58.983Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 154,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 7,
+      "date_supplied": "2023-01-20",
+      "created_at": "2023-01-20T09:59:16.630Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 155,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-01-20",
+      "created_at": "2023-01-20T09:59:37.433Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 156,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-01-20",
+      "created_at": "2023-01-20T10:00:01.297Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 157,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-20T19:37:39.030Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 158,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 7,
+      "quantity": 2,
+      "date_supplied": "2023-01-19",
+      "created_at": "2023-01-20T19:38:06.550Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 159,
+    "fields": {
+      "sales_person": "COLLINS SUPERVISOR-GG",
+      "product": 7,
+      "quantity": 8,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-20T19:39:28.167Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 160,
+    "fields": {
+      "sales_person": "COLLINS SUPERVISOR-GG",
+      "product": 5,
+      "quantity": 4,
+      "date_supplied": "2023-01-18",
+      "created_at": "2023-01-20T19:39:50.393Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 161,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 7,
+      "date_supplied": "2023-01-21",
+      "created_at": "2023-01-21T18:22:21.505Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 162,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-24",
+      "created_at": "2023-01-24T17:16:40.591Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 163,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-24",
+      "created_at": "2023-01-24T17:17:06.239Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 164,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2023-01-24",
+      "created_at": "2023-01-24T17:17:25.272Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 165,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-24",
+      "created_at": "2023-01-24T17:18:33.570Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 166,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T13:23:25.486Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 167,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T13:23:46.465Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 168,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T13:24:28.626Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 169,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T13:30:32.102Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 170,
+    "fields": {
+      "sales_person": "AMAKA",
+      "product": 7,
+      "quantity": 2,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T17:06:54.315Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 172,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T20:19:39.688Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 174,
+    "fields": {
+      "sales_person": "OGO",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T20:49:25.679Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 179,
+    "fields": {
+      "sales_person": "JOY",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-25T20:51:28.437Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 182,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-26",
+      "created_at": "2023-01-26T11:56:09.970Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 183,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 12,
+      "date_supplied": "2023-01-26",
+      "created_at": "2023-01-26T11:56:56.725Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 184,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-01-26",
+      "created_at": "2023-01-26T11:57:26.221Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 186,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 7,
+      "date_supplied": "2023-01-27",
+      "created_at": "2023-01-27T10:12:38.736Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 187,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 2,
+      "date_supplied": "2023-01-27",
+      "created_at": "2023-01-27T10:13:14.011Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 188,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-27",
+      "created_at": "2023-01-27T10:35:15.414Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 190,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-01-26",
+      "created_at": "2023-01-27T17:40:57.952Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 191,
+    "fields": {
+      "sales_person": "OGO",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:32:01.534Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 192,
+    "fields": {
+      "sales_person": "OGO",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:32:45.793Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 193,
+    "fields": {
+      "sales_person": "OGO",
+      "product": 4,
+      "quantity": 13,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:33:29.870Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 194,
+    "fields": {
+      "sales_person": "JOY",
+      "product": 1,
+      "quantity": 8,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:37:01.063Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 196,
+    "fields": {
+      "sales_person": "JOY",
+      "product": 4,
+      "quantity": 7,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:38:06.130Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 197,
+    "fields": {
+      "sales_person": "JOY",
+      "product": 2,
+      "quantity": 6,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:39:45.332Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 198,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 9,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:43:51.801Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 199,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2023-01-25",
+      "created_at": "2023-01-27T18:45:29.264Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 200,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2023-01-31",
+      "created_at": "2023-01-31T16:29:57.352Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 201,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 8,
+      "date_supplied": "2023-01-31",
+      "created_at": "2023-01-31T16:30:20.167Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 202,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 12,
+      "date_supplied": "2023-02-01",
+      "created_at": "2023-02-01T12:31:56.699Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 203,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-02-01",
+      "created_at": "2023-02-01T12:32:23.066Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 204,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-01",
+      "created_at": "2023-02-01T12:32:44.732Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 205,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-02",
+      "created_at": "2023-02-02T17:51:15.570Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 206,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:09:27.569Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 207,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:11:33.224Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 208,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 8,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:12:03.304Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 209,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 7,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:12:36.071Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 210,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 9,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:13:25.370Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 211,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 2,
+      "quantity": 6,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:14:05.413Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 212,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T09:14:25.651Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 213,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T16:52:22.019Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 214,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T16:52:51.601Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 215,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-02-03",
+      "created_at": "2023-02-03T16:53:14.802Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 216,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2023-02-04",
+      "created_at": "2023-02-04T09:51:16.163Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 218,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 7,
+      "date_supplied": "2023-02-04",
+      "created_at": "2023-02-04T09:52:25.060Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 219,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 7,
+      "date_supplied": "2023-02-04",
+      "created_at": "2023-02-04T09:52:49.879Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 220,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 3,
+      "date_supplied": "2023-02-04",
+      "created_at": "2023-02-04T09:53:14.026Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 221,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-02-07",
+      "created_at": "2023-02-07T08:49:48.340Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 222,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 10,
+      "date_supplied": "2023-02-07",
+      "created_at": "2023-02-07T08:50:17.207Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 223,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-02-08",
+      "created_at": "2023-02-08T10:27:15.251Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 224,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-02-08",
+      "created_at": "2023-02-08T10:27:46.219Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 225,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 4,
+      "date_supplied": "2023-02-08",
+      "created_at": "2023-02-08T10:28:20.410Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 226,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-08",
+      "created_at": "2023-02-08T10:30:06.623Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 227,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-02-09T19:21:31.777Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 228,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-02-09T19:22:07.412Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 229,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-02-09T19:22:27.699Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 230,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 15,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-02-09T19:22:49.091Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 235,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-02-11",
+      "created_at": "2023-02-11T17:25:24.474Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 236,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-11",
+      "created_at": "2023-02-11T17:25:47.704Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 237,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-02-11",
+      "created_at": "2023-02-11T17:26:05.864Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 238,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2023-02-11",
+      "created_at": "2023-02-11T17:26:42.703Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 239,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-15",
+      "created_at": "2023-02-15T19:58:09.512Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 240,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-02-15",
+      "created_at": "2023-02-15T19:58:41.499Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 241,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 9,
+      "date_supplied": "2023-02-15",
+      "created_at": "2023-02-15T19:59:08.429Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 242,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 11,
+      "date_supplied": "2023-02-15",
+      "created_at": "2023-02-15T19:59:27.299Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 243,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-02-22",
+      "created_at": "2023-02-22T18:15:30.252Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 244,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-02-22",
+      "created_at": "2023-02-22T18:15:56.107Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 245,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-22",
+      "created_at": "2023-02-22T18:16:23.603Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 246,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-23",
+      "created_at": "2023-02-24T08:40:46.786Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 247,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-02-23",
+      "created_at": "2023-02-24T08:41:08.459Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 248,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-02-23",
+      "created_at": "2023-02-24T08:41:31.352Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 249,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 7,
+      "date_supplied": "2023-02-23",
+      "created_at": "2023-02-24T08:42:00.103Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 250,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-24",
+      "created_at": "2023-02-24T08:42:22.519Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 251,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 6,
+      "date_supplied": "2023-02-24",
+      "created_at": "2023-02-24T08:42:59.674Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 252,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-02-24",
+      "created_at": "2023-02-24T08:43:24.840Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 253,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 8,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:04:08.528Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 254,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 7,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:04:31.536Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 255,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 7,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:05:02.239Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 256,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:05:49.565Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 257,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:06:21.081Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 258,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-02-28",
+      "created_at": "2023-02-28T12:06:46.720Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 259,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-03-01",
+      "created_at": "2023-03-04T06:56:35.346Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 260,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2023-03-01",
+      "created_at": "2023-03-04T06:56:58.257Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 261,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-03-01",
+      "created_at": "2023-03-04T06:57:24.437Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 262,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2023-03-02",
+      "created_at": "2023-03-04T06:58:19.973Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 263,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 9,
+      "date_supplied": "2023-03-02",
+      "created_at": "2023-03-04T06:58:42.152Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 264,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-03-03",
+      "created_at": "2023-03-04T06:59:08.376Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 265,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-07T18:27:12.945Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 266,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 10,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-07T18:27:38.509Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 267,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-07T18:28:08.039Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 269,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-07T18:29:05.896Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 270,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-07T18:29:54.776Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 272,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-08T07:55:23.079Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 273,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 3,
+      "date_supplied": "2023-03-07",
+      "created_at": "2023-03-08T07:55:57.733Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 274,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2023-03-04",
+      "created_at": "2023-03-08T07:58:27.330Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 275,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2023-03-04",
+      "created_at": "2023-03-08T07:58:59.238Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 276,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-09",
+      "created_at": "2023-03-09T09:05:08.155Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 278,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-03-09",
+      "created_at": "2023-03-09T09:06:17.378Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 279,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-09",
+      "created_at": "2023-03-09T09:06:51.077Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 280,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-09",
+      "created_at": "2023-03-09T09:08:06.737Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 281,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 11,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:09:30.136Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 282,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 9,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:09:52.967Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 283,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 10,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:10:13.498Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 288,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 4,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:13:33.216Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 289,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:14:46.813Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 290,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-10T13:15:27.933Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 291,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 9,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-15T19:03:31.635Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 292,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-14",
+      "created_at": "2023-03-17T09:05:02.624Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 293,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-14",
+      "created_at": "2023-03-17T09:06:16.381Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 294,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-14",
+      "created_at": "2023-03-17T09:07:16.277Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 295,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 1,
+      "quantity": 11,
+      "date_supplied": "2023-03-15",
+      "created_at": "2023-03-17T09:08:25.312Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 296,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2023-03-15",
+      "created_at": "2023-03-17T09:09:14.116Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 297,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2023-03-15",
+      "created_at": "2023-03-17T09:09:59.105Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 298,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 1,
+      "quantity": 15,
+      "date_supplied": "2023-03-17",
+      "created_at": "2023-03-17T09:10:24.205Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 299,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 2,
+      "quantity": 15,
+      "date_supplied": "2023-03-17",
+      "created_at": "2023-03-17T09:10:49.166Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 300,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 3,
+      "quantity": 10,
+      "date_supplied": "2023-03-17",
+      "created_at": "2023-03-17T09:11:43.375Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 302,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 1,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-18T19:23:55.821Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 303,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-21T09:59:26.072Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 304,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-21T10:00:40.735Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 305,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 8,
+      "date_supplied": "2023-03-21",
+      "created_at": "2023-03-21T10:07:43.732Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 306,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-21",
+      "created_at": "2023-03-21T10:08:20.656Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 307,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 6,
+      "date_supplied": "2023-03-21",
+      "created_at": "2023-03-21T10:08:42.621Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 308,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 7,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-22T21:50:03.312Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 311,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-22T21:53:32.659Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 312,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-22T21:53:51.307Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 313,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-22T21:54:17.544Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 314,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-23T09:00:42.502Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 315,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-22",
+      "created_at": "2023-03-23T09:06:17.077Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 316,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 7,
+      "date_supplied": "2023-03-24",
+      "created_at": "2023-03-24T10:18:11.907Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 317,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-24",
+      "created_at": "2023-03-24T10:19:04.511Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 318,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-03-24",
+      "created_at": "2023-03-24T10:20:05.006Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 319,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 1,
+      "date_supplied": "2023-03-24",
+      "created_at": "2023-03-24T10:20:32.429Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 320,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:10:15.720Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 321,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 3,
+      "quantity": 8,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:10:38.769Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 322,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 2,
+      "quantity": 7,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:11:25.741Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 323,
+    "fields": {
+      "sales_person": "FRIDAY",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:11:58.456Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 324,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:12:26.199Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 325,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 3,
+      "quantity": 7,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:12:47.386Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 326,
+    "fields": {
+      "sales_person": "FOUNTAIN",
+      "product": 2,
+      "quantity": 8,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:13:30.635Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 327,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 5,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:13:57.245Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 328,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:14:26.968Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 329,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:14:52.862Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 330,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 12,
+      "date_supplied": "2023-03-28",
+      "created_at": "2023-03-28T17:15:11.951Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 331,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 4,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:52:31.635Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 332,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 4,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:53:23.418Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 333,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 2,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:53:57.142Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 334,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 10,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:54:25.793Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 335,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 5,
+      "quantity": 1,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:58:32.262Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 336,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 6,
+      "quantity": 1,
+      "date_supplied": "2023-02-09",
+      "created_at": "2023-03-30T16:59:12.401Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 337,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 7,
+      "quantity": 1,
+      "date_supplied": "2023-02-23",
+      "created_at": "2023-03-30T17:12:52.128Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 338,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 6,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:18:18.572Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 339,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:18:43.208Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 340,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 5,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:19:07.813Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 341,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 6,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:19:33.364Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 342,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 1,
+      "quantity": 2,
+      "date_supplied": "2023-03-30",
+      "created_at": "2023-03-30T17:20:41.994Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 343,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 3,
+      "quantity": 3,
+      "date_supplied": "2023-03-30",
+      "created_at": "2023-03-30T17:21:02.195Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 344,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 2,
+      "quantity": 2,
+      "date_supplied": "2023-03-30",
+      "created_at": "2023-03-30T17:21:43.285Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 345,
+    "fields": {
+      "sales_person": "PETER",
+      "product": 4,
+      "quantity": 8,
+      "date_supplied": "2023-03-30",
+      "created_at": "2023-03-30T17:22:11.968Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 346,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 1,
+      "quantity": 12,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:23:14.625Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 347,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:24:19.022Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 348,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:24:49.613Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 349,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 4,
+      "quantity": 3,
+      "date_supplied": "2023-03-29",
+      "created_at": "2023-03-30T17:25:16.671Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 350,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2023-03-08",
+      "created_at": "2023-03-30T18:28:24.701Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 351,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 20,
+      "date_supplied": "2023-03-10",
+      "created_at": "2023-03-30T18:29:03.580Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 352,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 20,
+      "date_supplied": "2023-03-14",
+      "created_at": "2023-03-30T18:29:43.142Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 353,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2023-03-14",
+      "created_at": "2023-03-30T18:30:09.476Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 354,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 7,
+      "quantity": 22,
+      "date_supplied": "2023-03-16",
+      "created_at": "2023-03-30T18:31:01.396Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 355,
+    "fields": {
+      "sales_person": "MARKETING TEAM",
+      "product": 5,
+      "quantity": 20,
+      "date_supplied": "2023-03-17",
+      "created_at": "2023-03-30T18:31:37.427Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 356,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 4,
+      "quantity": 5,
+      "date_supplied": "2023-03-31",
+      "created_at": "2023-03-31T09:57:49.425Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 357,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 1,
+      "quantity": 10,
+      "date_supplied": "2023-03-31",
+      "created_at": "2023-03-31T10:04:06.193Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 358,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 2,
+      "quantity": 10,
+      "date_supplied": "2023-03-31",
+      "created_at": "2023-03-31T10:04:28.179Z"
+    }
+  },
+  {
+    "model": "finance.supply",
+    "pk": 359,
+    "fields": {
+      "sales_person": "MUNCH-IT MARKETING TEAM",
+      "product": 3,
+      "quantity": 5,
+      "date_supplied": "2023-03-31",
+      "created_at": "2023-03-31T10:04:46.115Z"
+    }
+  }
+
+]
