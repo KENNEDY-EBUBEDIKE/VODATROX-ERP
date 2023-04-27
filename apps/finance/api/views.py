@@ -185,15 +185,20 @@ def supply(request: Request) -> Response:
     if request.method == "DELETE":
         sp = SupplyTransaction.objects.get(id=request.GET['id'])
 
+        # Increase Stock
         sp.product.change_stock_balance(
             sp.quantity,
             direction="INC",
             details=f"REVERSAL FOR {sp.quantity} CTNS OF {sp.product.name}",
         )
 
+        # Reduce Debt
         sp.transaction.sales_person.set_debt(sp.transaction.sales_person.get_debt() - sp.transaction.amount)
+
+        # Increase Sales Person's Account Bal
         sp.transaction.sales_person.account_balance = sp.transaction.sales_person.account_balance + sp.transaction.amount
         sp.transaction.sales_person.save()
+
         sp.transaction.delete()
 
         return Response({
@@ -286,7 +291,6 @@ def deposits(request: Request) -> Response:
                 transaction=trx
             )
         except Exception as e:
-            print(e)
             return Response(
                 data={"success": False,
                       "message": e.args[0]
