@@ -23,20 +23,27 @@ def account(request: Request) -> Response:
 @permission_classes([IsAuthenticated])
 def credit_account(request: Request) -> Response:
     if request.user.is_superuser:
-        acct = Account.objects.get(id=request.data['account'])
-        acct.transact(
-            initiator=f"{request.user.first_name} {request.user.surname}",
-            trx_type="CREDIT",
-            amount=int(request.data['amount']),
-            details=request.data['transaction_details'],
-            ref=request.data['transaction_reference'],
-            trx_date=request.data['transaction_date'],
-            source=request.data['source'],
-        )
-        return Response({
-            'success': True,
-            'message': "Account Credited Successfully",
-        })
+        try:
+
+            acct = Account.objects.get(id=request.data['account'])
+            acct.transact(
+                initiator=f"{request.user.first_name} {request.user.surname}",
+                trx_type="CREDIT",
+                amount=int(request.data['amount'], 10),
+                details=request.data['transaction_details'],
+                ref=request.data['transaction_reference'],
+                trx_date=request.data['transaction_date'],
+                source=request.data['source'],
+            )
+            return Response({
+                'success': True,
+                'message': "Account Credited Successfully",
+            })
+        except Exception as e:
+            return Response({
+                "success": False,
+                "message": e.args[0]
+            })
 
 
 @api_view(["POST"])

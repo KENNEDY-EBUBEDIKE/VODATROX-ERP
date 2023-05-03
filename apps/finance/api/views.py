@@ -8,6 +8,8 @@ from apps.finance.serializers import *
 from apps.users.serializers import *
 from utilities import account_transaction_factory, finance_transaction_factory
 import datetime
+from django.conf import settings
+import pytz
 from apps.account.models import Account
 from django.db.models import F, Value, CharField, Sum
 
@@ -90,7 +92,7 @@ def purchase(request: Request) -> Response:
                 amount=p.amount,
                 details=f"Reversal of purchase error",
                 ref=f"REVERSAL/{p.order_reference}",
-                trx_date=datetime.datetime.now(),
+                trx_date=datetime.datetime.now(tz=pytz.timezone(settings.TIME_ZONE)),
                 source="REVERSAL",
             )
             p.delete()
@@ -132,7 +134,7 @@ def supply(request: Request) -> Response:
         product = Product.objects.get(id=int(request.data.get('product')))
         quantity = int(request.data.get('quantity'))
         date_supplied = request.data.get('date_supplied')
-        reference = f"SP/{int(datetime.datetime.now().timestamp())}"
+        reference = f"SP/{int(datetime.datetime.now(tz=pytz.timezone(settings.TIME_ZONE)).timestamp())}"
         if request.data.get('rate', None):
             rate = int(request.data['rate'])
         else:
