@@ -98,9 +98,10 @@ def purchase(request: Request) -> Response:
             p.delete()
             return Response({
                 'success': True,
+                'message': "Deleted Successfully",
             }, status=status.HTTP_200_OK)
 
-    purchases = Purchase.objects.all().order_by('-quantity', 'purchase_date')
+    purchases = Purchase.objects.all().order_by('-created_at')
     return Response({
         'success': True,
         'purchases': PurchaseSerializer(purchases, many=True).data
@@ -437,8 +438,7 @@ def transactions(request: Request) -> Response:
     )
 
     # Then union joins the Qs
-    all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('transaction_date')
-
+    all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('-transaction_date')
     return Response({
         'success': True,
         'transactions': TransactionSerializer(all_sales_persons_transactions, many=True).data
