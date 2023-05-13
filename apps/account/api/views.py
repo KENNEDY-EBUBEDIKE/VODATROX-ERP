@@ -24,7 +24,6 @@ def account(request: Request) -> Response:
 def credit_account(request: Request) -> Response:
     if request.user.is_superuser:
         try:
-
             acct = Account.objects.get(id=request.data['account'])
             acct.transact(
                 initiator=f"{request.user.first_name} {request.user.surname}",
@@ -74,4 +73,51 @@ def transactions(request: Request) -> Response:
         return Response({
             'success': True,
             'transactions': TransactionSerializer(all_transactions, many=True).data
+        })
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def inter_account_transfer(request: Request) -> Response:
+    if request.user.is_superuser:
+        # Get Accounts
+        from_acct = Account.objects.get(id=request.data['from_account'])
+        to_acct = Account.objects.get(id=request.data['to_account'])
+        amount = int(request.data['amount'])
+        details = request.data['transaction_details']
+        debit_ref = request.data['debit_ref']
+        credit_ref = request.data['credit_ref']
+        transaction_date = request.data['transaction_date']
+
+        try:
+            # Debit 'From' Account
+            from_acct.transact(
+                initiator=f"{request.user.first_name} {request.user.surname}",
+                trx_type="DEBIT",
+                amount=amount,
+                details=details,
+                ref=debit_ref,
+                trx_date=transaction_date,
+                source="TRANSFER",
+            )
+
+        # Credit 'To' Account
+            to_acct.transact(
+                initiator=f"{request.user.first_name} {request.user.surname}",
+                trx_type="CREDIT",
+                amount=amount,
+                details=details,
+                ref=credit_ref,
+                trx_date=transaction_date,
+                source="TRANSFER",
+            )
+
+        except Exception as e:
+            return Response({
+                "success": False,
+                "message": e.args[0]
+            })
+        return Response({
+            'success': True,
+            'message': "FUNDS TRANSFERRED SUCCESSFULLY",
         })

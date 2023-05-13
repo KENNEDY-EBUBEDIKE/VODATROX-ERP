@@ -6,6 +6,7 @@ urlpatterns = [
     path('accounts/', account, name='api-account'),
     path('credit-account/', credit_account, name='api-credit_account'),
     path('debit-account/', debit_account, name='api-debit_account'),
+    path('inter-transfer/', inter_account_transfer, name='api-inter_account_transfer'),
     path('transactions/', transactions, name='api-transactions'),
 ]
 

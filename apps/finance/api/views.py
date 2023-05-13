@@ -119,6 +119,7 @@ def confirm_purchase_delivery(request: Request) -> Response:
             details=f"PURCHASE OF {p.quantity} CARTONS OF {p.product.name}",
         )
         p.is_delivered = True
+        p.delivery_date = datetime.datetime.now(tz=pytz.timezone("Africa/Lagos"))
         p.log = log
         p.save()
         return Response({

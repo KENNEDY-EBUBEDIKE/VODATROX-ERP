@@ -127,6 +127,7 @@ class Purchase(models.Model):
     expected_revenue = models.IntegerField(null=False, blank=False, default=0)
     purchase_date = models.DateField(auto_now=False)
     is_delivered = models.BooleanField(default=False)
+    delivery_date = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
