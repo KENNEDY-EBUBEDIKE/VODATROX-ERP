@@ -439,6 +439,7 @@ def transactions(request: Request) -> Response:
 
     # Then union joins the Qs
     all_sales_persons_transactions = deposit_transactions.union(supply_transactions).order_by('-created_at')
+
     return Response({
         'success': True,
         'transactions': TransactionSerializer(all_sales_persons_transactions, many=True).data

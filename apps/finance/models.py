@@ -40,7 +40,7 @@ class Transaction(models.Model):
     transaction_date = models.DateTimeField(null=False)
     transaction_reference = models.CharField(null=True, blank=True, max_length=255)
     transaction_details = models.CharField(null=True, blank=True, max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.sales_person)
