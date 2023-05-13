@@ -322,8 +322,10 @@ def deposits(request: Request) -> Response:
 
     elif request.method == "GET":
         all_deposits = DepositTransaction.objects.all().order_by(
-            'transaction__transaction_date', 'is_confirmed',
+            '-is_confirmed',
+            '-transaction__transaction_date',
             'transaction__amount')
+
         return Response({
             'success': True,
             "deposits": DepositTransactionSerializer(all_deposits, many=True).data,
