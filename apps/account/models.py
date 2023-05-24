@@ -19,6 +19,7 @@ class Account(models.Model):
                  trx_date=None,
                  source=None
                  ):
+
         #  generate Trx
         if trx_type == "DEBIT":
             ba = self.account_balance - amount

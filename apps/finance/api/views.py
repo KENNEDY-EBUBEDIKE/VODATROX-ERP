@@ -189,21 +189,39 @@ def supply(request: Request) -> Response:
     if request.method == "DELETE":
         sp = SupplyTransaction.objects.get(id=request.GET['id'])
 
-        # Increase Stock
-        sp.product.change_stock_balance(
-            sp.quantity,
-            direction="INC",
-            details=f"REVERSAL FOR {sp.quantity} CTNS OF {sp.product.name}",
+        # generate a deposit transaction
+        trx = Transaction.objects.create(
+            sales_person=sp.transaction.sales_person,
+            amount=sp.transaction.amount,
+            balance_before=sp.transaction.sales_person.account_balance,
+            balance_after=sp.transaction.sales_person.account_balance + sp.transaction.amount,
+            transaction_type="DEPOSIT",
+            transaction_date=datetime.datetime.now(tz=pytz.timezone("Africa/Lagos")),
+            transaction_reference=datetime.datetime.now(tz=pytz.timezone("Africa/Lagos")).timestamp(),
+            transaction_details=f"REVERSAL FOR {sp.quantity} CTNS OF {sp.product.name}",
         )
 
-        # Reduce Debt
-        sp.transaction.sales_person.set_debt(sp.transaction.sales_person.get_debt() - sp.transaction.amount)
+        deposit = DepositTransaction.objects.create(
+            transaction=trx,
+            is_confirmed=True,
+        )
 
-        # Increase Sales Person's Account Bal
-        sp.transaction.sales_person.account_balance = sp.transaction.sales_person.account_balance + sp.transaction.amount
-        sp.transaction.sales_person.save()
+        if deposit:
+            # Increase Stock
+            sp.product.change_stock_balance(
+                sp.quantity,
+                direction="INC",
+                details=f"REVERSAL FOR {sp.quantity} CTNS OF {sp.product.name}",
+            )
 
-        sp.transaction.delete()
+            # Reduce Debt
+            sp.transaction.sales_person.set_debt(sp.transaction.sales_person.get_debt() - sp.transaction.amount)
+
+            # Increase Sales Person's Account Bal
+            sp.transaction.sales_person.account_balance = sp.transaction.sales_person.account_balance + sp.transaction.amount
+            sp.transaction.sales_person.save()
+
+            sp.transaction.delete()
 
         return Response({
             'success': True,

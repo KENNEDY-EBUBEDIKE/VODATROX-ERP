@@ -26,6 +26,16 @@ class SalesPerson(models.Model):
             print(e)
             return 0
 
+        # if deposit transaction:
+        #   reduce debt,
+        #   increase sales person's balance,
+        #   credit bank account
+
+        # if supply transaction:
+        #   reduce stock,
+        #   increase debt,
+        #   reduce sales person's balance
+
 
 class Transaction(models.Model):
     TRANSACTION_TYPES = (
