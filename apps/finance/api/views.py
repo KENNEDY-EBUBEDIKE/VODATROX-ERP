@@ -464,3 +464,34 @@ def transactions(request: Request) -> Response:
         'success': True,
         'transactions': TransactionSerializer(all_sales_persons_transactions, many=True).data
     })
+
+
+@api_view(["GET", "POST"])
+@permission_classes([IsAuthenticated])
+def swap_product(request: Request) -> Response:
+    from_product = Product.objects.get(id=int(request.data.get('convertFrom')))
+    to_product = Product.objects.get(id=int(request.data.get('convertTo')))
+    from_quantity = int(request.data.get('fromQuantity'))
+    to_quantity = int(request.data.get('toQuantity'))
+    details = request.data.get('details')
+
+    # @Todo
+    try:
+        from_value = from_product.cost_price * from_quantity
+        to_value = to_product.cost_price * to_quantity
+        assert from_value == to_value, f"{to_quantity} Ctns of {to_product} cannot be swapped with {from_quantity} Ctns of {from_product}"
+        assert from_product.stock_balance >= from_quantity, f"Not enough quantity of {from_product.alias_name} to be swapped"
+
+        from_product.change_stock_balance(from_quantity, "DEC", details)
+        to_product.change_stock_balance(to_quantity, "INC", details)
+
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': e.args[0]
+        }, status=status.HTTP_200_OK)
+
+    return Response({
+        'success': True,
+        'message': "Product Swapped Successfully",
+    }, status=status.HTTP_200_OK)
